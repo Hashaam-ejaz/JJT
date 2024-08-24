@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Junior Jinnah Trust](https://jjtrust.org) project in collaboration with I3A Solutions(https://www.i3asolutions.com).
 
 ## Getting Started
 
