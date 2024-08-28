@@ -5,3 +5,5 @@ export const courses = pgTable("courses", {
   title: text("title").notNull(),
   imageSrc: text("image_src").notNull(),
 });
+
+// export const userProgress = pgTable("")

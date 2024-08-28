@@ -16,16 +16,6 @@ const Learn = () => {
       </StickyWrapper>
       <FeedWrapper>
         <Header title="English" />
-        <div className="space-y-4">
-          <div className="h-[200px] bg-black" />
-          <div className="h-[200px] bg-black" />
-          <div className="h-[200px] bg-black" />
-          <div className="h-[200px] bg-black" />
-          <div className="h-[200px] bg-black" />
-          <div className="h-[200px] bg-black" />
-          <div className="h -[200px] bg-black" />
-          <div className="h-[200px] bg-black" />
-        </div>
       </FeedWrapper>
     </div>
   );
