@@ -17,7 +17,6 @@ export const MobileSidebar = () => {
         <VisuallyHidden.Root>
           <SheetTitle>Menu</SheetTitle>
         </VisuallyHidden.Root>
-
         <Sidebar />
       </SheetContent>
     </Sheet>
