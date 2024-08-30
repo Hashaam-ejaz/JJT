@@ -22,7 +22,7 @@ export const Card = ({
 }: props) => {
   return (
     <div
-      //   onClick={() => onclick(id)}
+      onClick={() => onClick(id)}
       className={cn(
         "pb06 flex h-full min-h-[217px] min-w-[200[x]] cursor-pointer flex-col items-center justify-between rounded-xl border-2 border-b-4 p-3 hover:bg-black/5 active:border-b-2",
         disabled && "pointer-events-none opacity-50",

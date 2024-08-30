@@ -7,10 +7,6 @@ export const courses = pgTable("courses", {
   imageSrc: text("image_src").notNull(),
 });
 
-export const coursesRelations = relations(courses, ({ many }) => ({
-  userProgress: many(userProgress),
-}));
-
 export const userProgress = pgTable("user_progress", {
   userId: text("user_id").primaryKey(),
   userName: text("user_name").notNull(),
@@ -21,6 +17,10 @@ export const userProgress = pgTable("user_progress", {
   hearts: integer("hearts").notNull().default(5),
   points: integer("points").notNull().default(0),
 });
+
+export const coursesRelations = relations(courses, ({ many }) => ({
+  userProgress: many(userProgress),
+}));
 
 export const userProgressRelations = relations(userProgress, ({ one }) => ({
   activeCourse: one(courses, {
