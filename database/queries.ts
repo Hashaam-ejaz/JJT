@@ -41,7 +41,7 @@ export const getUnits = cache(async () => {
   if (!userProgress?.activeCourseId || !userId) {
     return [];
   }
-  //TODO: Confirm whether order is needed
+  //TODO:Confirm whether order is needed
   const data = await db.query.units.findMany({
     where: eq(units.courseId, userProgress.activeCourseId),
     with: {
@@ -143,7 +143,7 @@ export const getLesson = cache(async (id?: number) => {
     },
   });
 
-  if (!data || !data.challenges) {
+  if (!data || !data?.challenges) {
     return null;
   }
 
