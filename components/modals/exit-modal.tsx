@@ -54,7 +54,7 @@ export const ExitModal = () => {
                 className="w-full"
                 size={"lg"}
                 onClick={() => {
-                  close;
+                  close();
                   router.push("/learn");
                 }}
               >
