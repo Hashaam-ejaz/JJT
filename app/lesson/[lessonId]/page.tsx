@@ -30,7 +30,6 @@ const LessonIdPage = async ({ params }: props) => {
       initialLessonChallenges={lesson.challenges}
       initialHearts={userProgress.hearts}
       initialPercentage={initialPercentage}
-      userSubscription={null}
     />
   );
 };
