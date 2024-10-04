@@ -24,14 +24,12 @@ type props = {
     completed: boolean;
     challengeOptions: (typeof challengeOptions.$inferSelect)[];
   })[];
-  userSubscription: any;
 };
 export const Quiz = ({
   initialPercentage,
   initialHearts,
   initialLessonId,
   initialLessonChallenges,
-  userSubscription,
 }: props) => {
   const { open: openHeartsModal } = useHeartsModal();
   const { open: openPractiseModal } = usePractisesModal();
@@ -191,11 +189,7 @@ export const Quiz = ({
     <>
       {correctAudio}
       {incorrectAudio}
-      <Header
-        hearts={hearts}
-        percentage={percentage}
-        hasActiveSubscription={!!userSubscription?.isActive}
-      />
+      <Header hearts={hearts} percentage={percentage} />
       <div className="flex-1">
         <div className="flex h-full items-center justify-center">
           <div className="flex w-full flex-col gap-y-12 px-6 lg:min-h-[350px] lg:w-[600px] lg:px-0">
