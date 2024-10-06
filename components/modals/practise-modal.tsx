@@ -8,7 +8,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import { usePractisesModal } from "@/store/use-practise-modal";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -28,7 +28,7 @@ export const PractiseModal = () => {
             <Image src={"/heart.png"} alt="Heart" height={100} width={100} />
           </div>
           <DialogTitle className="text-center text-2xl font-bold">
-            You ran out of hearts
+            Did you run out of hearts ?
           </DialogTitle>
           <DialogDescription className="text-center text-base">
             Use Practise lessons to regain hearts and points. You cannot loose
