@@ -29,15 +29,32 @@ export const PUT = async (
     .returning();
   return NextResponse.json(data);
 };
+
 export const DELETE = async (
   req: Request,
   { params }: { params: { lessonId: number } },
 ) => {
-  if (!isAdmin) return new NextResponse("Untauthorized", { status: 403 });
-  const body = await req.json();
-  const data = await db
-    .delete(lessons)
-    .where(eq(lessons.id, params.lessonId))
-    .returning();
-  return NextResponse.json(data[0]);
+  if (!isAdmin) return new NextResponse("Unauthorized", { status: 403 });
+
+  try {
+    const data = await db
+      .delete(lessons)
+      .where(eq(lessons.id, params.lessonId))
+      .returning();
+
+    if (!data[0]) {
+      // Return a 404 if the lesson doesn't exist
+      return NextResponse.json({ error: "Lesson not found" }, { status: 404 });
+    }
+
+    // Return the deleted item as a JSON response
+    return NextResponse.json(data[0]);
+  } catch (error) {
+    console.error("Error deleting lesson:", error);
+    // Return a 500 response for any unexpected errors
+    return NextResponse.json(
+      { error: "Failed to delete lesson" },
+      { status: 500 },
+    );
+  }
 };
