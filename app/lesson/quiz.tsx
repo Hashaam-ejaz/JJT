@@ -75,9 +75,30 @@ export const Quiz = ({
   };
   const challenge = challenges[activeIndex];
   const options = challenge?.challengeOptions ?? [];
+  // const onNext = () => {
+
+  //   setActiveIndex((current) => current + 1);
+  // };
   const onNext = () => {
+    // Check if the current challenge is of type 'READ' before updating progress
+    if (challenge.type === "READ") {
+      startTransition(() => {
+        upsertChallengeProgress(challenge.id)
+          .then((response) => {
+            if (response?.error === "hearts") {
+              openHeartsModal();
+              return;
+            }
+            setPercentage((prev) => prev + 100 / challenges.length);
+          })
+          .catch(() => toast.error("Something went wrong, please try again"));
+      });
+    }
+
+    // Move to the next challenge
     setActiveIndex((current) => current + 1);
   };
+
   const onContinue = () => {
     if (!selectedOption) return;
     if (status === "wrong") {
@@ -157,7 +178,7 @@ export const Quiz = ({
             height={50}
             width={50}
           />
-          <h1 className="text-neutral-00 text-xl font-bold lg:text-3xl">
+          <h1 className="text-xl font-bold text-neutral-700 lg:text-3xl">
             Great Job! <br /> You&apos;ve completed the lesson
           </h1>
           <div className="flex w-full items-center gap-x-4">
@@ -189,17 +210,30 @@ export const Quiz = ({
     <>
       {correctAudio}
       {incorrectAudio}
+      {challenge.type === "READ" && (
+        <audio src={challenge.audioSrc!} autoPlay />
+      )}
       <Header hearts={hearts} percentage={percentage} />
       <div className="flex-1">
         <div className="flex h-full items-center justify-center">
           <div className="flex w-full flex-col gap-y-12 px-6 lg:min-h-[350px] lg:w-[600px] lg:px-0">
-            <h1 className="text-center text-lg font-bold text-neutral-700 lg:text-start lg:text-3xl">
+            <h1 className="text-center text-lg font-bold text-neutral-700 lg:text-3xl">
               {title}
             </h1>
             <div>
               {challenge.type === "ASSIST" && (
                 <QuestionBubble question={challenge.question} />
               )}
+              <div className="flex w-full items-center justify-center">
+                {challenge.type === "READ" && challenge.imageSrc && (
+                  <Image
+                    src={challenge.imageSrc}
+                    alt="Read Challenge"
+                    height={200}
+                    width={200}
+                  />
+                )}
+              </div>
               <Challenge
                 options={options}
                 onSelect={onSelect}
@@ -213,9 +247,12 @@ export const Quiz = ({
         </div>
       </div>
       <Footer
-        disabled={pending || !selectedOption}
+        disabled={pending || (challenge.type !== "READ" && !selectedOption)}
         status={status}
-        onCheck={onContinue}
+        onCheck={
+          challenge.type === "READ" ? () => onNext() : () => onContinue()
+        }
+        isReadType={challenge.type === "READ"}
       />
     </>
   );

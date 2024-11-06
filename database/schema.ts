@@ -77,7 +77,7 @@ export const lessonsRelations = relations(lessons, ({ one, many }) => ({
   challenges: many(challenges),
 }));
 
-export const ChallengesEnum = pgEnum("type", ["SELECT", "ASSIST"]);
+export const ChallengesEnum = pgEnum("type", ["SELECT", "ASSIST", "READ"]);
 
 export const challenges = pgTable("challenges", {
   id: serial("id").primaryKey(),
@@ -86,6 +86,8 @@ export const challenges = pgTable("challenges", {
     .notNull(),
   type: ChallengesEnum("type").notNull(),
   question: text("question").notNull(),
+  imageSrc: text("image_src"), // New field for "READ" image
+  audioSrc: text("audio_src"), // New field for "READ" audio
   order: integer("order").notNull(),
 });
 

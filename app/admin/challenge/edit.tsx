@@ -24,10 +24,16 @@ export const ChallengeEdit = () => {
               id: "ASSIST",
               name: "ASSIST",
             },
+            {
+              id: "READ",
+              name: "READ",
+            },
           ]}
           validate={[required()]}
         />
         <ReferenceInput source="lessonId" reference="lessons" />
+        <TextInput source="imageSrc" label="Image URL" defaultValue="" />
+        <TextInput source="audioSrc" label="Audio URL" defaultValue="" />
         <NumberInput source="order" validate={[required()]} label={"Order"} />
       </SimpleForm>
     </Edit>

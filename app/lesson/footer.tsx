@@ -9,8 +9,15 @@ type props = {
   status: "correct" | "wrong" | "none" | "completed";
   disabled?: boolean;
   lessonId?: number;
+  isReadType?: boolean;
 };
-export const Footer = ({ onCheck, status, disabled, lessonId }: props) => {
+export const Footer = ({
+  onCheck,
+  status,
+  disabled,
+  lessonId,
+  isReadType,
+}: props) => {
   useKey("Enter", onCheck, {}, [onCheck]);
   const isMobile = useMedia("(max-width: 1024px)", false);
   return (
@@ -52,10 +59,21 @@ export const Footer = ({ onCheck, status, disabled, lessonId }: props) => {
           onClick={onCheck}
           className="ml-auto"
         >
-          {status === "none" && "Check"}
+          {/* {status === "none" && "Check"}
           {status === "correct" && "Next"}
           {status === "wrong" && "Retry"}
-          {status === "completed" && "Continue"}
+          {status === "completed" && "Continue"} */}
+          {isReadType
+            ? status === "completed"
+              ? "Continue"
+              : "Next"
+            : status === "none"
+              ? "Check"
+              : status === "correct"
+                ? "Next"
+                : status === "wrong"
+                  ? "Retry"
+                  : "Continue"}
         </Button>
       </div>
     </footer>
