@@ -83,7 +83,7 @@ export const Quiz = ({
     // Check if the current challenge is of type 'READ' before updating progress
     if (challenge.type === "READ") {
       startTransition(() => {
-        upsertChallengeProgress(challenge.id)
+        upsertChallengeProgress(challenge.id, challenge.type === "READ")
           .then((response) => {
             if (response?.error === "hearts") {
               openHeartsModal();
@@ -147,7 +147,7 @@ export const Quiz = ({
               setHearts((prev) => Math.max(prev - 1, 0));
             }
           })
-          .catch(() => toast.error("something went wrong lolol"));
+          .catch(() => toast.error("something went wrong"));
       });
     }
   };

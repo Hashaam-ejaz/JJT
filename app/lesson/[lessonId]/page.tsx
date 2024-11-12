@@ -9,7 +9,9 @@ type props = {
 };
 
 const LessonIdPage = async ({ params }: props) => {
-  const lessonData = getLesson(params.lessonId);
+  const lessonId = Number(params.lessonId);
+
+  const lessonData = getLesson(lessonId);
   const userProgressData = getUserProgress();
 
   const [lesson, userProgress] = await Promise.all([
@@ -17,7 +19,10 @@ const LessonIdPage = async ({ params }: props) => {
     userProgressData,
   ]);
 
-  if (!lesson || !userProgress) redirect("/learn");
+  if (!lesson || !userProgress) {
+    redirect("/learn");
+    return null;
+  }
 
   const initialPercentage =
     (lesson.challenges.filter((challege) => challege.completed).length /
