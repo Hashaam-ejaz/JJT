@@ -100,55 +100,6 @@ const main = async () => {
         order: 3,
         question: 'Which one of these is a "Robot" ?',
       },
-      // {
-      //   id: 4,
-      //   lessonId: 1, //Nouns
-      //   type: "SELECT",
-      //   order: 4,
-      //   question: 'Which one of these is a "Chair" ?',
-      // },
-      // {
-      //   id: 5,
-      //   lessonId: 1, //Nouns
-      //   type: "SELECT",
-      //   order: 5,
-      //   question: 'Which one of these is a "Book" ?',
-      // },
-      // {
-      //   id: 6,
-      //   lessonId: 1, //Nouns
-      //   type: "SELECT",
-      //   order: 6,
-      //   question: 'Which one of these is a "Dog" ?',
-      // },
-      // {
-      //   id: 7,
-      //   lessonId: 1, //Nouns
-      //   type: "SELECT",
-      //   order: 7,
-      //   question: 'Which one of these is a "Table" ?',
-      // },
-      // {
-      //   id: 8,
-      //   lessonId: 1, //Nouns
-      //   type: "SELECT",
-      //   order: 8,
-      //   question: 'Which one of these is a "Flower" ?',
-      // },
-      // {
-      //   id: 9,
-      //   lessonId: 1, //Nouns
-      //   type: "SELECT",
-      //   order: 9,
-      //   question: 'Which one of these is a "Cat" ?',
-      // },
-      // {
-      //   id: 10,
-      //   lessonId: 1, //Nouns
-      //   type: "SELECT",
-      //   order: 10,
-      //   question: 'Which one of these is a "Car" ?',
-      // },
     ]);
 
     await db.insert(schema.challengeOptions).values([
