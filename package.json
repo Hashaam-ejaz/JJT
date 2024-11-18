@@ -11,7 +11,8 @@
     "db:push": "bunx drizzle-kit push",
     "db:seed": "bun ./scripts/seed.ts",
     "db:reset": "bun ./scripts/reset.ts",
-    "db:reset-progress": "bun ./scripts/reset-progress.ts"
+    "db:reset-progress": "bun ./scripts/reset-progress.ts",
+    "db:maths": "bun ./scripts/maths.ts"
   },
   "dependencies": {
     "@clerk/nextjs": "^5.3.3",
