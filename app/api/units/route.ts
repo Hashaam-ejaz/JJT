@@ -7,7 +7,11 @@ export const GET = async () => {
   if (!isAdmin) {
     return new NextResponse("Unauthorized", { status: 401 });
   }
-  const data = await db.query.units.findMany();
+  const data = await db.query.units.findMany({
+    with: {
+      course: true,
+    },
+  });
   return NextResponse.json(data);
 };
 export const POST = async (req: Request) => {

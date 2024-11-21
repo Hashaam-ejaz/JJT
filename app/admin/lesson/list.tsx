@@ -14,6 +14,11 @@ export const LessonList = () => {
         <TextField source="title" />
 
         <ReferenceField source="unitId" reference="units" />
+        <ReferenceField source="unitId" reference="units" link={false}>
+          <ReferenceField source="courseId" reference="courses">
+            <TextField source="title" />
+          </ReferenceField>
+        </ReferenceField>
         <NumberField source="order" />
       </Datagrid>
     </List>
