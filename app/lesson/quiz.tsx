@@ -228,6 +228,7 @@ export const Quiz = ({
                 {challenge.type === "READ" && challenge.imageSrc && (
                   <Image
                     src={challenge.imageSrc}
+                    className="max-h-[200px] max-w-[200px] object-contain"
                     alt="Read Challenge"
                     height={200}
                     width={200}
