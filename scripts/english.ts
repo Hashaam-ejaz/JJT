@@ -4293,116 +4293,247 @@ const main = async () => {
     //   },
     // ]);
 
-    // English Unit 18
+    // // English Unit 18
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 22,
+    //     courseId: 2, //English
+    //     title: "Unit 18",
+    //     description: "Clothing Items",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 18 - clothing items
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 41,
+    //     unitId: 22, //Unit 18 eng
+    //     order: 1,
+    //     title: "Clothing Items",
+    //   },
+    // ]);
+    // // 10 challenges for 10 items
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 354,
+    //     lessonId: 41, //Clothing Items
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Suit",
+    //     imageSrc: "/levels-images/suit.svg",
+    //     audioSrc: "/levels-audio/suit.mp3",
+    //   },
+    //   {
+    //     id: 355,
+    //     lessonId: 41, //Clothing Items
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Socks",
+    //     imageSrc: "/levels-images/socks.svg",
+    //     audioSrc: "/levels-audio/socks.mp3",
+    //   },
+    //   {
+    //     id: 356,
+    //     lessonId: 41, //Clothing Items
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Slippers",
+    //     imageSrc: "/levels-images/slippers.svg",
+    //     audioSrc: "/levels-audio/slippers.mp3",
+    //   },
+    //   {
+    //     id: 357,
+    //     lessonId: 41, //Clothing Items
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Shirt",
+    //     imageSrc: "/levels-images/shirt.svg",
+    //     audioSrc: "/levels-audio/shirt.mp3",
+    //   },
+    //   {
+    //     id: 358,
+    //     lessonId: 41, //Clothing Items
+    //     type: "READ",
+    //     order: 5,
+    //     question: "Jeans",
+    //     imageSrc: "/levels-images/jeans.svg",
+    //     audioSrc: "/levels-audio/jeans.mp3",
+    //   },
+    //   {
+    //     id: 359,
+    //     lessonId: 41, //Clothing Items
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Jacket",
+    //     imageSrc: "/levels-images/jacket.svg",
+    //     audioSrc: "/levels-audio/jacket.mp3",
+    //   },
+    //   {
+    //     id: 360,
+    //     lessonId: 41, //Clothing Items
+    //     type: "READ",
+    //     order: 7,
+    //     question: "Hat",
+    //     imageSrc: "/levels-images/hat.svg",
+    //     audioSrc: "/levels-audio/hatt.mp3",
+    //   },
+    //   {
+    //     id: 361,
+    //     lessonId: 41, //Clothing Items
+    //     type: "READ",
+    //     order: 8,
+    //     question: "Gloves",
+    //     imageSrc: "/levels-images/gloves.svg",
+    //     audioSrc: "/levels-audio/gloves.mp3",
+    //   },
+    //   {
+    //     id: 362,
+    //     lessonId: 41, //Clothing Items
+    //     type: "READ",
+    //     order: 9,
+    //     question: "Coat",
+    //     imageSrc: "/levels-images/coat.svg",
+    //     audioSrc: "/levels-audio/coat.mp3",
+    //   },
+    //   {
+    //     id: 363,
+    //     lessonId: 41, //Clothing Items
+    //     type: "READ",
+    //     order: 10,
+    //     question: "Boots",
+    //     imageSrc: "/levels-images/boots.svg",
+    //     audioSrc: "/levels-audio/boots.mp3",
+    //   },
+    // ]);
+
+    // English Unit 19
     await db.insert(schema.units).values([
       {
-        id: 22,
+        id: 23,
         courseId: 2, //English
-        title: "Unit 18",
-        description: "Clothing Items",
+        title: "Unit 19",
+        description: "Animals",
         order: 1,
       },
     ]);
-    // 1 lessons in unit 18 - clothing items
+    // 1 lessons in unit 19 - Animals
     await db.insert(schema.lessons).values([
       {
-        id: 41,
-        unitId: 22, //Unit 18 eng
+        id: 42,
+        unitId: 23, //Unit 19 eng
         order: 1,
-        title: "Clothing Items",
+        title: "Animals",
       },
     ]);
-    // 10 challenges for 10 items
+    // 12 challenges for 12 animals
     await db.insert(schema.challenges).values([
       {
-        id: 354,
-        lessonId: 41, //Clothing Items
+        id: 364,
+        lessonId: 42, //Animal
         type: "READ",
         order: 1,
-        question: "Suit",
-        imageSrc: "/levels-images/suit.svg",
-        audioSrc: "/levels-audio/suit.mp3",
+        question: "Cat",
+        imageSrc: "/levels-images/cat.svg",
+        audioSrc: "/levels-audio/catt.mp3",
       },
       {
-        id: 355,
-        lessonId: 41, //Clothing Items
+        id: 365,
+        lessonId: 42, //Animal
         type: "READ",
         order: 2,
-        question: "Socks",
-        imageSrc: "/levels-images/socks.svg",
-        audioSrc: "/levels-audio/socks.mp3",
+        question: "Dog",
+        imageSrc: "/levels-images/dog.svg",
+        audioSrc: "/levels-audio/dogg.mp3",
       },
       {
-        id: 356,
-        lessonId: 41, //Clothing Items
+        id: 366,
+        lessonId: 42, //Animal
         type: "READ",
         order: 3,
-        question: "Slippers",
-        imageSrc: "/levels-images/slippers.svg",
-        audioSrc: "/levels-audio/slippers.mp3",
+        question: "Wolf",
+        imageSrc: "/levels-images/wolf.svg",
+        audioSrc: "/levels-audio/wolf.mp3",
       },
       {
-        id: 357,
-        lessonId: 41, //Clothing Items
+        id: 367,
+        lessonId: 42, //Animal
         type: "READ",
         order: 4,
-        question: "Shirt",
-        imageSrc: "/levels-images/shirt.svg",
-        audioSrc: "/levels-audio/shirt.mp3",
+        question: "Tiger",
+        imageSrc: "/levels-images/tiger.svg",
+        audioSrc: "/levels-audio/tiger.mp3",
       },
       {
-        id: 358,
-        lessonId: 41, //Clothing Items
+        id: 368,
+        lessonId: 42, //Animal
         type: "READ",
         order: 5,
-        question: "Jeans",
-        imageSrc: "/levels-images/jeans.svg",
-        audioSrc: "/levels-audio/jeans.mp3",
+        question: "Mouse",
+        imageSrc: "/levels-images/mouse.svg",
+        audioSrc: "/levels-audio/mouse.mp3",
       },
       {
-        id: 359,
-        lessonId: 41, //Clothing Items
+        id: 369,
+        lessonId: 42, //Animal
         type: "READ",
         order: 6,
-        question: "Jacket",
-        imageSrc: "/levels-images/jacket.svg",
-        audioSrc: "/levels-audio/jacket.mp3",
+        question: "Monkey",
+        imageSrc: "/levels-images/monkey.svg",
+        audioSrc: "/levels-audio/monkey.mp3",
       },
       {
-        id: 360,
-        lessonId: 41, //Clothing Items
+        id: 370,
+        lessonId: 42, //Animal
         type: "READ",
         order: 7,
-        question: "Hat",
-        imageSrc: "/levels-images/hat.svg",
-        audioSrc: "/levels-audio/hatt.mp3",
+        question: "Lion",
+        imageSrc: "/levels-images/lion.svg",
+        audioSrc: "/levels-audio/lion.mp3",
       },
       {
-        id: 361,
-        lessonId: 41, //Clothing Items
+        id: 371,
+        lessonId: 42, //Animal
         type: "READ",
         order: 8,
-        question: "Gloves",
-        imageSrc: "/levels-images/gloves.svg",
-        audioSrc: "/levels-audio/gloves.mp3",
+        question: "Gorilla",
+        imageSrc: "/levels-images/gorilla.svg",
+        audioSrc: "/levels-audio/gorilla.mp3",
       },
       {
-        id: 362,
-        lessonId: 41, //Clothing Items
+        id: 372,
+        lessonId: 42, //Animal
         type: "READ",
         order: 9,
-        question: "Coat",
-        imageSrc: "/levels-images/coat.svg",
-        audioSrc: "/levels-audio/coat.mp3",
+        question: "Goat",
+        imageSrc: "/levels-images/goat.svg",
+        audioSrc: "/levels-audio/goat.mp3",
       },
       {
-        id: 363,
-        lessonId: 41, //Clothing Items
+        id: 373,
+        lessonId: 42, //Animal
         type: "READ",
         order: 10,
-        question: "Boots",
-        imageSrc: "/levels-images/boots.svg",
-        audioSrc: "/levels-audio/boots.mp3",
+        question: "Cow",
+        imageSrc: "/levels-images/cow.svg",
+        audioSrc: "/levels-audio/cow.mp3",
+      },
+      {
+        id: 374,
+        lessonId: 42, //Animal
+        type: "READ",
+        order: 11,
+        question: "Camel",
+        imageSrc: "/levels-images/camel.svg",
+        audioSrc: "/levels-audio/camel.mp3",
+      },
+      {
+        id: 375,
+        lessonId: 42, //Animal
+        type: "READ",
+        order: 12,
+        question: "Bear",
+        imageSrc: "/levels-images/bear.svg",
+        audioSrc: "/levels-audio/bear.mp3",
       },
     ]);
 
