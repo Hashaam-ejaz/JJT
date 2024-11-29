@@ -28,7 +28,7 @@ export const PractiseModal = () => {
             <Image src={"/heart.png"} alt="Heart" height={100} width={100} />
           </div>
           <DialogTitle className="text-center text-2xl font-bold">
-            Did you run out of hearts ?
+            Practise Lesson
           </DialogTitle>
           <DialogDescription className="text-center text-base">
             Use Practise lessons to regain hearts and points. You cannot loose

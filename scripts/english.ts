@@ -20,6 +20,7 @@ const main = async () => {
     //   },
     // ]);
 
+    //English unit 1
     // await db.insert(schema.units).values([
     //   {
     //     id: 5,
@@ -2624,260 +2625,1784 @@ const main = async () => {
     //   },
     // ]);
 
-    //English Unit 3
+    // //English Unit 3
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 7,
+    //     courseId: 2, //English
+    //     title: "Unit 3",
+    //     description: "Phonics",
+    //     order: 1,
+    //   },
+    // ]);s
+    // // 1 lessons in unit 3 - Phonics Pronunciation
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 26,
+    //     unitId: 7, //Unit 3 eng
+    //     order: 1,
+    //     title: "Phonics",
+    //   },
+    // ]);
+    // // 26 challenges for Phonics - 1 for each letter
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 206,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Apple",
+    //     imageSrc: "/levels-images/apple.svg",
+    //     audioSrc: "/levels-audio/apple.mp3",
+    //   },
+    //   {
+    //     id: 207,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Ball",
+    //     imageSrc: "/levels-images/ball.svg",
+    //     audioSrc: "/levels-audio/ball.mp3",
+    //   },
+    //   {
+    //     id: 208,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Cat",
+    //     imageSrc: "/levels-images/cat.svg",
+    //     audioSrc: "/levels-audio/cat.mp3",
+    //   },
+    //   {
+    //     id: 209,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Dog",
+    //     imageSrc: "/levels-images/dog.svg",
+    //     audioSrc: "/levels-audio/dog.mp3",
+    //   },
+    //   {
+    //     id: 210,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 5,
+    //     question: "Elephant",
+    //     imageSrc: "/levels-images/elephant.svg",
+    //     audioSrc: "/levels-audio/elephant.mp3",
+    //   },
+    //   {
+    //     id: 211,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Food",
+    //     imageSrc: "/levels-images/food.svg",
+    //     audioSrc: "/levels-audio/food.mp3",
+    //   },
+    //   {
+    //     id: 212,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 7,
+    //     question: "Gate",
+    //     imageSrc: "/levels-images/gate.svg",
+    //     audioSrc: "/levels-audio/gate.mp3",
+    //   },
+    //   {
+    //     id: 213,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 8,
+    //     question: "Hat",
+    //     imageSrc: "/levels-images/hat.svg",
+    //     audioSrc: "/levels-audio/hat.mp3",
+    //   },
+    //   {
+    //     id: 214,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 9,
+    //     question: "Insect",
+    //     imageSrc: "/levels-images/insect.svg",
+    //     audioSrc: "/levels-audio/insect.mp3",
+    //   },
+    //   {
+    //     id: 215,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 10,
+    //     question: "Jug",
+    //     imageSrc: "/levels-images/jug.svg",
+    //     audioSrc: "/levels-audio/jug.mp3",
+    //   },
+    //   {
+    //     id: 216,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 11,
+    //     question: "Kite",
+    //     imageSrc: "/levels-images/kite.svg",
+    //     audioSrc: "/levels-audio/kite.mp3",
+    //   },
+    //   {
+    //     id: 217,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 12,
+    //     question: "Lamp",
+    //     imageSrc: "/levels-images/lamp.svg",
+    //     audioSrc: "/levels-audio/lamp.mp3",
+    //   },
+    //   {
+    //     id: 218,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 13,
+    //     question: "Milk",
+    //     imageSrc: "/levels-images/milk.svg",
+    //     audioSrc: "/levels-audio/milk.mp3",
+    //   },
+    //   {
+    //     id: 219,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 14,
+    //     question: "Needle",
+    //     imageSrc: "/levels-images/needle.svg",
+    //     audioSrc: "/levels-audio/needle.mp3",
+    //   },
+    //   {
+    //     id: 220,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 15,
+    //     question: "Orange",
+    //     imageSrc: "/levels-images/orange.svg",
+    //     audioSrc: "/levels-audio/orange.mp3",
+    //   },
+    //   {
+    //     id: 221,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 16,
+    //     question: "Pencil",
+    //     imageSrc: "/levels-images/pencil.svg",
+    //     audioSrc: "/levels-audio/pencil.mp3",
+    //   },
+    //   {
+    //     id: 222,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 17,
+    //     question: "Question Mark",
+    //     imageSrc: "/levels-images/question.svg",
+    //     audioSrc: "/levels-audio/question.mp3",
+    //   },
+    //   {
+    //     id: 223,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 18,
+    //     question: "Rice",
+    //     imageSrc: "/levels-images/rice.svg",
+    //     audioSrc: "/levels-audio/rice.mp3",
+    //   },
+    //   {
+    //     id: 224,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 19,
+    //     question: "Sun",
+    //     imageSrc: "/levels-images/sun.svg",
+    //     audioSrc: "/levels-audio/sun.mp3",
+    //   },
+    //   {
+    //     id: 225,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 20,
+    //     question: "Tomato",
+    //     imageSrc: "/levels-images/tomato.svg",
+    //     audioSrc: "/levels-audio/tomato.mp3",
+    //   },
+    //   {
+    //     id: 226,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 21,
+    //     question: "Umbrella",
+    //     imageSrc: "/levels-images/umbrella.svg",
+    //     audioSrc: "/levels-audio/umbrella.mp3",
+    //   },
+    //   {
+    //     id: 227,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 22,
+    //     question: "Van",
+    //     imageSrc: "/levels-images/van.svg",
+    //     audioSrc: "/levels-audio/van.mp3",
+    //   },
+    //   {
+    //     id: 228,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 23,
+    //     question: "Water",
+    //     imageSrc: "/levels-images/water.svg",
+    //     audioSrc: "/levels-audio/water.mp3",
+    //   },
+    //   {
+    //     id: 229,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 24,
+    //     question: "X-Ray",
+    //     imageSrc: "/levels-images/xray.svg",
+    //     audioSrc: "/levels-audio/xray.mp3",
+    //   },
+    //   {
+    //     id: 230,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 25,
+    //     question: "Yellow",
+    //     imageSrc: "/levels-images/yellow.svg",
+    //     audioSrc: "/levels-audio/yellow.mp3",
+    //   },
+    //   {
+    //     id: 231,
+    //     lessonId: 26, //Phonics
+    //     type: "READ",
+    //     order: 26,
+    //     question: "Zebra",
+    //     imageSrc: "/levels-images/zebra.svg",
+    //     audioSrc: "/levels-audio/zebra.mp3",
+    //   },
+    // ]);
+
+    // //English Unit 4
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 8,
+    //     courseId: 2, //English
+    //     title: "Unit 4",
+    //     description: "Numbers",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 4 - Numbers
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 27,
+    //     unitId: 8, //Unit 4 eng
+    //     order: 1,
+    //     title: "Numbers",
+    //   },
+    // ]);
+    // // 26 challenges for Numbers - 1 for each letter
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 232,
+    //     lessonId: 27, //Numbers
+    //     type: "READ",
+    //     order: 1,
+    //     question: "One",
+    //     imageSrc: "/levels-images/1.svg",
+    //     audioSrc: "/levels-audio/1.mp3",
+    //   },
+    //   {
+    //     id: 234,
+    //     lessonId: 27, //Numbers
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Two",
+    //     imageSrc: "/levels-images/2.svg",
+    //     audioSrc: "/levels-audio/2.mp3",
+    //   },
+    //   {
+    //     id: 235,
+    //     lessonId: 27, //Numbers
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Three",
+    //     imageSrc: "/levels-images/3.svg",
+    //     audioSrc: "/levels-audio/3.mp3",
+    //   },
+    //   {
+    //     id: 236,
+    //     lessonId: 27, //Numbers
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Four",
+    //     imageSrc: "/levels-images/4.svg",
+    //     audioSrc: "/levels-audio/4.mp3",
+    //   },
+    //   {
+    //     id: 237,
+    //     lessonId: 27, //Numbers
+    //     type: "READ",
+    //     order: 5,
+    //     question: "Five",
+    //     imageSrc: "/levels-images/5.svg",
+    //     audioSrc: "/levels-audio/5.mp3",
+    //   },
+    //   {
+    //     id: 238,
+    //     lessonId: 27, //Numbers
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Six",
+    //     imageSrc: "/levels-images/6.svg",
+    //     audioSrc: "/levels-audio/6.mp3",
+    //   },
+    //   {
+    //     id: 239,
+    //     lessonId: 27, //Numbers
+    //     type: "READ",
+    //     order: 7,
+    //     question: "Seven",
+    //     imageSrc: "/levels-images/7.svg",
+    //     audioSrc: "/levels-audio/7.mp3",
+    //   },
+    //   {
+    //     id: 240,
+    //     lessonId: 27, //Numbers
+    //     type: "READ",
+    //     order: 8,
+    //     question: "Eight",
+    //     imageSrc: "/levels-images/8.svg",
+    //     audioSrc: "/levels-audio/8.mp3",
+    //   },
+    //   {
+    //     id: 241,
+    //     lessonId: 27, //Numbers
+    //     type: "READ",
+    //     order: 9,
+    //     question: "Nine",
+    //     imageSrc: "/levels-images/9.svg",
+    //     audioSrc: "/levels-audio/9.mp3",
+    //   },
+    //   {
+    //     id: 242,
+    //     lessonId: 27, //Numbers
+    //     type: "READ",
+    //     order: 10,
+    //     question: "Ten",
+    //     imageSrc: "/levels-images/10.svg",
+    //     audioSrc: "/levels-audio/10.mp3",
+    //   },
+    // ]);
+
+    // //English Unit 5
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 9,
+    //     courseId: 2, //English
+    //     title: "Unit 5",
+    //     description: "Body Parts",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 5 - Body Parts
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 28,
+    //     unitId: 9, //Unit 5 eng
+    //     order: 1,
+    //     title: "Body Parts",
+    //   },
+    // ]);
+    // // 9 challenges for Body Parts - 1 for each letter
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 243,
+    //     lessonId: 28, //Body Parts
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Arm",
+    //     imageSrc: "/levels-images/arm.svg",
+    //     audioSrc: "/levels-audio/arm.mp3",
+    //   },
+    //   {
+    //     id: 244,
+    //     lessonId: 28, //Body Parts
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Ear",
+    //     imageSrc: "/levels-images/ear.svg",
+    //     audioSrc: "/levels-audio/ear.mp3",
+    //   },
+    //   {
+    //     id: 245,
+    //     lessonId: 28, //Body Parts
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Eyes",
+    //     imageSrc: "/levels-images/eyes.svg",
+    //     audioSrc: "/levels-audio/eyes.mp3",
+    //   },
+    //   {
+    //     id: 246,
+    //     lessonId: 28, //Body Parts
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Feet",
+    //     imageSrc: "/levels-images/feet.svg",
+    //     audioSrc: "/levels-audio/feet.mp3",
+    //   },
+    //   {
+    //     id: 247,
+    //     lessonId: 28, //Body Parts
+    //     type: "READ",
+    //     order: 5,
+    //     question: "Hand",
+    //     imageSrc: "/levels-images/hand.svg",
+    //     audioSrc: "/levels-audio/hand.mp3",
+    //   },
+    //   {
+    //     id: 248,
+    //     lessonId: 28, //Body Parts
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Head",
+    //     imageSrc: "/levels-images/head.svg",
+    //     audioSrc: "/levels-audio/head.mp3",
+    //   },
+    //   {
+    //     id: 249,
+    //     lessonId: 28, //Body Parts
+    //     type: "READ",
+    //     order: 7,
+    //     question: "Legs",
+    //     imageSrc: "/levels-images/legs.svg",
+    //     audioSrc: "/levels-audio/legs.mp3",
+    //   },
+    //   {
+    //     id: 250,
+    //     lessonId: 28, //Body Parts
+    //     type: "READ",
+    //     order: 8,
+    //     question: "Lips",
+    //     imageSrc: "/levels-images/lips.svg",
+    //     audioSrc: "/levels-audio/lips.mp3",
+    //   },
+    //   {
+    //     id: 251,
+    //     lessonId: 28, //Body Parts
+    //     type: "READ",
+    //     order: 9,
+    //     question: "Nose",
+    //     imageSrc: "/levels-images/nose.svg",
+    //     audioSrc: "/levels-audio/nose.mp3",
+    //   },
+    // ]);
+
+    // // English Unit 6
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 10,
+    //     courseId: 2, //English
+    //     title: "Unit 6",
+    //     description: "Colors",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 6 - Colors
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 29,
+    //     unitId: 10, //Unit 5 eng
+    //     order: 1,
+    //     title: "Colors",
+    //   },
+    // ]);
+    // // 10 challenges for Colors - 1 for each color
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 252,
+    //     lessonId: 29, //Colors
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Black",
+    //     imageSrc: "/levels-images/black.svg",
+    //     audioSrc: "/levels-audio/black.mp3",
+    //   },
+    //   {
+    //     id: 253,
+    //     lessonId: 29, //Colors
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Blue",
+    //     imageSrc: "/levels-images/blue.svg",
+    //     audioSrc: "/levels-audio/blue.mp3",
+    //   },
+    //   {
+    //     id: 254,
+    //     lessonId: 29, //Colors
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Brown",
+    //     imageSrc: "/levels-images/brown.svg",
+    //     audioSrc: "/levels-audio/brown.mp3",
+    //   },
+    //   {
+    //     id: 255,
+    //     lessonId: 29, //Colors
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Grey",
+    //     imageSrc: "/levels-images/grey.svg",
+    //     audioSrc: "/levels-audio/grey.mp3",
+    //   },
+    //   {
+    //     id: 256,
+    //     lessonId: 29, //Colors
+    //     type: "READ",
+    //     order: 5,
+    //     question: "Green",
+    //     imageSrc: "/levels-images/green.svg",
+    //     audioSrc: "/levels-audio/green.mp3",
+    //   },
+    //   {
+    //     id: 257,
+    //     lessonId: 29, //Colors
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Orange",
+    //     imageSrc: "/levels-images/orangec.svg",
+    //     audioSrc: "/levels-audio/orange.mp3",
+    //   },
+    //   {
+    //     id: 258,
+    //     lessonId: 29, //Colors
+    //     type: "READ",
+    //     order: 7,
+    //     question: "Pink",
+    //     imageSrc: "/levels-images/pink.svg",
+    //     audioSrc: "/levels-audio/pink.mp3",
+    //   },
+    //   {
+    //     id: 259,
+    //     lessonId: 29, //Colors
+    //     type: "READ",
+    //     order: 8,
+    //     question: "Purple",
+    //     imageSrc: "/levels-images/purple.svg",
+    //     audioSrc: "/levels-audio/purple.mp3",
+    //   },
+    //   {
+    //     id: 260,
+    //     lessonId: 29, //Colors
+    //     type: "READ",
+    //     order: 9,
+    //     question: "Red",
+    //     imageSrc: "/levels-images/red.svg",
+    //     audioSrc: "/levels-audio/red.mp3",
+    //   },
+    //   {
+    //     id: 261,
+    //     lessonId: 29, //Colors
+    //     type: "READ",
+    //     order: 10,
+    //     question: "Yellow",
+    //     imageSrc: "/levels-images/yellow.svg",
+    //     audioSrc: "/levels-audio/yellow.mp3",
+    //   },
+    // ]);
+
+    // // English Unit 7
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 11,
+    //     courseId: 2, //English
+    //     title: "Unit 7",
+    //     description: "Days",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 7 - Days of the week
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 30,
+    //     unitId: 11, //Unit 5 eng
+    //     order: 1,
+    //     title: "Days",
+    //   },
+    // ]);
+    // // 7 challenges for Days in the Week - 1 for each Day
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 262,
+    //     lessonId: 30, //Days
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Monday",
+    //     imageSrc: "/levels-images/monday.svg",
+    //     audioSrc: "/levels-audio/monday.mp3",
+    //   },
+    //   {
+    //     id: 263,
+    //     lessonId: 30, //Days
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Tuesday",
+    //     imageSrc: "/levels-images/tuesday.svg",
+    //     audioSrc: "/levels-audio/tuesday.mp3",
+    //   },
+    //   {
+    //     id: 264,
+    //     lessonId: 30, //Days
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Wednesday",
+    //     imageSrc: "/levels-images/wednesday.svg",
+    //     audioSrc: "/levels-audio/wednesday.mp3",
+    //   },
+    //   {
+    //     id: 265,
+    //     lessonId: 30, //Days
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Thursday",
+    //     imageSrc: "/levels-images/thursday.svg",
+    //     audioSrc: "/levels-audio/thursday.mp3",
+    //   },
+    //   {
+    //     id: 266,
+    //     lessonId: 30, //Days
+    //     type: "READ",
+    //     order: 5,
+    //     question: "Friday",
+    //     imageSrc: "/levels-images/friday.svg",
+    //     audioSrc: "/levels-audio/friday.mp3",
+    //   },
+    //   {
+    //     id: 267,
+    //     lessonId: 30, //Days
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Saturday",
+    //     imageSrc: "/levels-images/saturday.svg",
+    //     audioSrc: "/levels-audio/saturday.mp3",
+    //   },
+    //   {
+    //     id: 268,
+    //     lessonId: 30, //Days
+    //     type: "READ",
+    //     order: 7,
+    //     question: "Sunday",
+    //     imageSrc: "/levels-images/sunday.svg",
+    //     audioSrc: "/levels-audio/sunday.mp3",
+    //   },
+    // ]);
+
+    // // English Unit 8
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 12,
+    //     courseId: 2, //English
+    //     title: "Unit 8",
+    //     description: "Months",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 8 - Months of the Year
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 31,
+    //     unitId: 12, //Unit 8 eng
+    //     order: 1,
+    //     title: "Months",
+    //   },
+    // ]);
+    // // 12 challenges for Months in the Year - 1 for each Month
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 269,
+    //     lessonId: 31, //Months
+    //     type: "READ",
+    //     order: 1,
+    //     question: "January",
+    //     imageSrc: "/levels-images/january.svg",
+    //     audioSrc: "/levels-audio/january.mp3",
+    //   },
+    //   {
+    //     id: 270,
+    //     lessonId: 31, //Months
+    //     type: "READ",
+    //     order: 2,
+    //     question: "February",
+    //     imageSrc: "/levels-images/february.svg",
+    //     audioSrc: "/levels-audio/february.mp3",
+    //   },
+    //   {
+    //     id: 271,
+    //     lessonId: 31, //Months
+    //     type: "READ",
+    //     order: 3,
+    //     question: "March",
+    //     imageSrc: "/levels-images/march.svg",
+    //     audioSrc: "/levels-audio/march.mp3",
+    //   },
+    //   {
+    //     id: 272,
+    //     lessonId: 31, //Months
+    //     type: "READ",
+    //     order: 4,
+    //     question: "April",
+    //     imageSrc: "/levels-images/april.svg",
+    //     audioSrc: "/levels-audio/april.mp3",
+    //   },
+    //   {
+    //     id: 273,
+    //     lessonId: 31, //Months
+    //     type: "READ",
+    //     order: 5,
+    //     question: "May",
+    //     imageSrc: "/levels-images/may.svg",
+    //     audioSrc: "/levels-audio/may.mp3",
+    //   },
+    //   {
+    //     id: 274,
+    //     lessonId: 31, //Months
+    //     type: "READ",
+    //     order: 6,
+    //     question: "June",
+    //     imageSrc: "/levels-images/june.svg",
+    //     audioSrc: "/levels-audio/june.mp3",
+    //   },
+    //   {
+    //     id: 275,
+    //     lessonId: 31, //Months
+    //     type: "READ",
+    //     order: 7,
+    //     question: "July",
+    //     imageSrc: "/levels-images/july.svg",
+    //     audioSrc: "/levels-audio/july.mp3",
+    //   },
+    //   {
+    //     id: 276,
+    //     lessonId: 31, //Months
+    //     type: "READ",
+    //     order: 8,
+    //     question: "August",
+    //     imageSrc: "/levels-images/august.svg",
+    //     audioSrc: "/levels-audio/august.mp3",
+    //   },
+    //   {
+    //     id: 277,
+    //     lessonId: 31, //Months
+    //     type: "READ",
+    //     order: 9,
+    //     question: "September",
+    //     imageSrc: "/levels-images/september.svg",
+    //     audioSrc: "/levels-audio/september.mp3",
+    //   },
+    //   {
+    //     id: 278,
+    //     lessonId: 31, //Months
+    //     type: "READ",
+    //     order: 10,
+    //     question: "October",
+    //     imageSrc: "/levels-images/october.svg",
+    //     audioSrc: "/levels-audio/october.mp3",
+    //   },
+    //   {
+    //     id: 279,
+    //     lessonId: 31, //Months
+    //     type: "READ",
+    //     order: 11,
+    //     question: "November",
+    //     imageSrc: "/levels-images/november.svg",
+    //     audioSrc: "/levels-audio/november.mp3",
+    //   },
+    //   {
+    //     id: 280,
+    //     lessonId: 31, //Months
+    //     type: "READ",
+    //     order: 12,
+    //     question: "December",
+    //     imageSrc: "/levels-images/december.svg",
+    //     audioSrc: "/levels-audio/december.mp3",
+    //   },
+    // ]);
+
+    // // English Unit 9
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 13,
+    //     courseId: 2, //English
+    //     title: "Unit 9",
+    //     description: "Flowers",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 9 - Flowers
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 32,
+    //     unitId: 13, //Unit 9 eng
+    //     order: 1,
+    //     title: "Flowers",
+    //   },
+    // ]);
+    // // 4 challenges for 4 Flowers
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 281,
+    //     lessonId: 32, //Flowers
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Rose",
+    //     imageSrc: "/levels-images/rose.svg",
+    //     audioSrc: "/levels-audio/rose.mp3",
+    //   },
+    //   {
+    //     id: 282,
+    //     lessonId: 32, //Flowers
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Sunflower",
+    //     imageSrc: "/levels-images/sunflower.svg",
+    //     audioSrc: "/levels-audio/sunflower.mp3",
+    //   },
+    //   {
+    //     id: 283,
+    //     lessonId: 32, //Flowers
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Tulip",
+    //     imageSrc: "/levels-images/tulip.svg",
+    //     audioSrc: "/levels-audio/tulip.mp3",
+    //   },
+    //   {
+    //     id: 284,
+    //     lessonId: 32, //Flowers
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Daisy",
+    //     imageSrc: "/levels-images/daisy.svg",
+    //     audioSrc: "/levels-audio/daisy.mp3",
+    //   },
+    // ]);
+
+    // // English Unit 10
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 14,
+    //     courseId: 2, //English
+    //     title: "Unit 10",
+    //     description: "Birds",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 10 - Birds
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 33,
+    //     unitId: 14, //Unit 10 eng
+    //     order: 1,
+    //     title: "Birds",
+    //   },
+    // ]);
+    // // 8 challenges for 8 Birds
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 285,
+    //     lessonId: 33, //Birds
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Eagle",
+    //     imageSrc: "/levels-images/eagle.svg",
+    //     audioSrc: "/levels-audio/eagle.mp3",
+    //   },
+    //   {
+    //     id: 286,
+    //     lessonId: 33, //Birds
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Vulture",
+    //     imageSrc: "/levels-images/vulture.svg",
+    //     audioSrc: "/levels-audio/vulture.mp3",
+    //   },
+    //   {
+    //     id: 287,
+    //     lessonId: 33, //Birds
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Ostrich",
+    //     imageSrc: "/levels-images/ostrich.svg",
+    //     audioSrc: "/levels-audio/ostrich.mp3",
+    //   },
+    //   {
+    //     id: 288,
+    //     lessonId: 33, //Birds
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Owl",
+    //     imageSrc: "/levels-images/owl.svg",
+    //     audioSrc: "/levels-audio/owl.mp3",
+    //   },
+    //   {
+    //     id: 289,
+    //     lessonId: 33, //Birds
+    //     type: "READ",
+    //     order: 5,
+    //     question: "Flamingo",
+    //     imageSrc: "/levels-images/flamingo.svg",
+    //     audioSrc: "/levels-audio/flamingo.mp3",
+    //   },
+    //   {
+    //     id: 290,
+    //     lessonId: 33, //Birds
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Chicken",
+    //     imageSrc: "/levels-images/chicken.svg",
+    //     audioSrc: "/levels-audio/chicken.mp3",
+    //   },
+    //   {
+    //     id: 291,
+    //     lessonId: 33, //Birds
+    //     type: "READ",
+    //     order: 7,
+    //     question: "Rooster",
+    //     imageSrc: "/levels-images/rooster.svg",
+    //     audioSrc: "/levels-audio/rooster.mp3",
+    //   },
+    //   {
+    //     id: 292,
+    //     lessonId: 33, //Birds
+    //     type: "READ",
+    //     order: 8,
+    //     question: "Duck",
+    //     imageSrc: "/levels-images/duck.svg",
+    //     audioSrc: "/levels-audio/duck.mp3",
+    //   },
+    // ]);
+
+    // // English Unit 11
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 15,
+    //     courseId: 2, //English
+    //     title: "Unit 11",
+    //     description: "Fruits",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 11 - Fruits
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 34,
+    //     unitId: 15, //Unit 11 eng
+    //     order: 1,
+    //     title: "Fruits",
+    //   },
+    // ]);
+    // // 10 challenges for 10 Fruits
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 293,
+    //     lessonId: 34, //Fruits
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Orange",
+    //     imageSrc: "/levels-images/orange.svg",
+    //     audioSrc: "/levels-audio/orange.mp3",
+    //   },
+    //   {
+    //     id: 294,
+    //     lessonId: 34, //Fruits
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Banana",
+    //     imageSrc: "/levels-images/banana.svg",
+    //     audioSrc: "/levels-audio/banana.mp3",
+    //   },
+    //   {
+    //     id: 295,
+    //     lessonId: 34, //Fruits
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Cherry",
+    //     imageSrc: "/levels-images/cherry.svg",
+    //     audioSrc: "/levels-audio/cherry.mp3",
+    //   },
+    //   {
+    //     id: 296,
+    //     lessonId: 34, //Fruits
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Grapes",
+    //     imageSrc: "/levels-images/grapes.svg",
+    //     audioSrc: "/levels-audio/grapes.mp3",
+    //   },
+    //   {
+    //     id: 297,
+    //     lessonId: 34, //Fruits
+    //     type: "READ",
+    //     order: 5,
+    //     question: "Kiwi",
+    //     imageSrc: "/levels-images/kiwi.svg",
+    //     audioSrc: "/levels-audio/kiwi.mp3",
+    //   },
+    //   {
+    //     id: 298,
+    //     lessonId: 34, //Fruits
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Mango",
+    //     imageSrc: "/levels-images/mango.svg",
+    //     audioSrc: "/levels-audio/mango.mp3",
+    //   },
+    //   {
+    //     id: 299,
+    //     lessonId: 34, //Fruits
+    //     type: "READ",
+    //     order: 7,
+    //     question: "Pineapple",
+    //     imageSrc: "/levels-images/pineapple.svg",
+    //     audioSrc: "/levels-audio/pineapple.mp3",
+    //   },
+    //   {
+    //     id: 300,
+    //     lessonId: 34, //Fruits
+    //     type: "READ",
+    //     order: 8,
+    //     question: "Pomegranate",
+    //     imageSrc: "/levels-images/pomegranate.svg",
+    //     audioSrc: "/levels-audio/pomegranate.mp3",
+    //   },
+    //   {
+    //     id: 301,
+    //     lessonId: 34, //Fruits
+    //     type: "READ",
+    //     order: 9,
+    //     question: "Strawberry",
+    //     imageSrc: "/levels-images/strawberry.svg",
+    //     audioSrc: "/levels-audiosStrawberry.mp3",
+    //   },
+    //   {
+    //     id: 302,
+    //     lessonId: 34, //Fruits
+    //     type: "READ",
+    //     order: 10,
+    //     question: "Watermelon",
+    //     imageSrc: "/levels-images/watermelon.svg",
+    //     audioSrc: "/levels-audio/watermelon.mp3",
+    //   },
+    // ]);
+
+    // // English Unit 12
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 16,
+    //     courseId: 2, //English
+    //     title: "Unit 12",
+    //     description: "Vegetables",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 12 - Vegetables
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 35,
+    //     unitId: 16, //Unit 12 eng
+    //     order: 1,
+    //     title: "Vegetables",
+    //   },
+    // ]);
+    // // 9 challenges for 9 Vegetables
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 303,
+    //     lessonId: 35, //Vegetables
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Apple",
+    //     imageSrc: "/levels-images/apple.svg",
+    //     audioSrc: "/levels-audio/apple.mp3",
+    //   },
+    //   {
+    //     id: 304,
+    //     lessonId: 35, //Vegetables
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Cabbage",
+    //     imageSrc: "/levels-images/cabbage.svg",
+    //     audioSrc: "/levels-audio/cabbage.mp3",
+    //   },
+    //   {
+    //     id: 305,
+    //     lessonId: 35, //Vegetables
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Carrot",
+    //     imageSrc: "/levels-images/carrot.svg",
+    //     audioSrc: "/levels-audio/carrot.mp3",
+    //   },
+    //   {
+    //     id: 306,
+    //     lessonId: 35, //Vegetables
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Cucumber",
+    //     imageSrc: "/levels-images/cucumber.svg",
+    //     audioSrc: "/levels-audio/cucumber.mp3",
+    //   },
+    //   {
+    //     id: 307,
+    //     lessonId: 35, //Vegetables
+    //     type: "READ",
+    //     order: 5,
+    //     question: "Eggplant",
+    //     imageSrc: "/levels-images/eggplant.svg",
+    //     audioSrc: "/levels-audio/eggplant.mp3",
+    //   },
+    //   {
+    //     id: 308,
+    //     lessonId: 35, //Vegetables
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Garlic",
+    //     imageSrc: "/levels-images/garlic.svg",
+    //     audioSrc: "/levels-audio/garlic.mp3",
+    //   },
+    //   {
+    //     id: 309,
+    //     lessonId: 35, //Vegetables
+    //     type: "READ",
+    //     order: 7,
+    //     question: "Onion",
+    //     imageSrc: "/levels-images/onion.svg",
+    //     audioSrc: "/levels-audio/onion.mp3",
+    //   },
+    //   {
+    //     id: 310,
+    //     lessonId: 35, //Vegetables
+    //     type: "READ",
+    //     order: 8,
+    //     question: "Peas",
+    //     imageSrc: "/levels-images/peas.svg",
+    //     audioSrc: "/levels-audio/peas.mp3",
+    //   },
+    //   {
+    //     id: 311,
+    //     lessonId: 35, //Vegetables
+    //     type: "READ",
+    //     order: 9,
+    //     question: "Tomato",
+    //     imageSrc: "/levels-images/tomato.svg",
+    //     audioSrc: "/levels-audiostomatoo.mp3",
+    //   },
+    // ]);
+
+    // // English Unit 13
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 17,
+    //     courseId: 2, //English
+    //     title: "Unit 13",
+    //     description: "Seasons",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 13 - Seasons
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 36,
+    //     unitId: 17, //Unit 13 eng
+    //     order: 1,
+    //     title: "Seasons",
+    //   },
+    // ]);
+    // // 4 challenges for 4 Seasons
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 312,
+    //     lessonId: 36, //Seasons
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Winter",
+    //     imageSrc: "/levels-images/winter.svg",
+    //     audioSrc: "/levels-audio/winter.mp3",
+    //   },
+    //   {
+    //     id: 313,
+    //     lessonId: 36, //Seasons
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Summer",
+    //     imageSrc: "/levels-images/summer.svg",
+    //     audioSrc: "/levels-audio/summer.mp3",
+    //   },
+    //   {
+    //     id: 314,
+    //     lessonId: 36, //Seasons
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Autumn",
+    //     imageSrc: "/levels-images/autumn.svg",
+    //     audioSrc: "/levels-audio/autumn.mp3",
+    //   },
+    //   {
+    //     id: 315,
+    //     lessonId: 36, //Seasons
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Spring",
+    //     imageSrc: "/levels-images/spring.svg",
+    //     audioSrc: "/levels-audio/spring.mp3",
+    //   },
+    // ]);
+
+    // // English Unit 14
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 18,
+    //     courseId: 2, //English
+    //     title: "Unit 14",
+    //     description: "Shapes",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 14 - Shapes
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 37,
+    //     unitId: 18, //Unit 14 eng
+    //     order: 1,
+    //     title: "Shapes",
+    //   },
+    // ]);
+    // // 13 challenges for 13 Shapes
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 316,
+    //     lessonId: 37, //Shapes
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Circle",
+    //     imageSrc: "/levels-images/circle.svg",
+    //     audioSrc: "/levels-audio/circle.mp3",
+    //   },
+    //   {
+    //     id: 317,
+    //     lessonId: 37, //Shapes
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Semicircle",
+    //     imageSrc: "/levels-images/semicircle.svg",
+    //     audioSrc: "/levels-audio/semicircle.mp3",
+    //   },
+    //   {
+    //     id: 318,
+    //     lessonId: 37, //Shapes
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Square",
+    //     imageSrc: "/levels-images/square.svg",
+    //     audioSrc: "/levels-audio/square.mp3",
+    //   },
+    //   {
+    //     id: 319,
+    //     lessonId: 37, //Shapes
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Rectangle",
+    //     imageSrc: "/levels-images/rectangle.svg",
+    //     audioSrc: "/levels-audio/rectangle.mp3",
+    //   },
+    //   {
+    //     id: 320,
+    //     lessonId: 37, //Shapes
+    //     type: "READ",
+    //     order: 5,
+    //     question: "Cone",
+    //     imageSrc: "/levels-images/cone.svg",
+    //     audioSrc: "/levels-audio/cone.mp3",
+    //   },
+    //   {
+    //     id: 321,
+    //     lessonId: 37, //Shapes
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Diamond",
+    //     imageSrc: "/levels-images/diamond.svg",
+    //     audioSrc: "/levels-audio/diamond.mp3",
+    //   },
+    //   {
+    //     id: 322,
+    //     lessonId: 37, //Shapes
+    //     type: "READ",
+    //     order: 7,
+    //     question: "Hexagon",
+    //     imageSrc: "/levels-images/hexagon.svg",
+    //     audioSrc: "/levels-audio/hexagon.mp3",
+    //   },
+    //   {
+    //     id: 323,
+    //     lessonId: 37, //Shapes
+    //     type: "READ",
+    //     order: 8,
+    //     question: "Octagon",
+    //     imageSrc: "/levels-images/octagon.svg",
+    //     audioSrc: "/levels-audio/octagon.mp3",
+    //   },
+    //   {
+    //     id: 324,
+    //     lessonId: 37, //Shapes
+    //     type: "READ",
+    //     order: 9,
+    //     question: "Oval",
+    //     imageSrc: "/levels-images/oval.svg",
+    //     audioSrc: "/levels-audio/oval.mp3",
+    //   },
+    //   {
+    //     id: 325,
+    //     lessonId: 37, //Shapes
+    //     type: "READ",
+    //     order: 10,
+    //     question: "Parallelogram",
+    //     imageSrc: "/levels-images/parallelogram.svg",
+    //     audioSrc: "/levels-audio/parallelogram.mp3",
+    //   },
+    //   {
+    //     id: 326,
+    //     lessonId: 37, //Shapes
+    //     type: "READ",
+    //     order: 11,
+    //     question: "Pentagon",
+    //     imageSrc: "/levels-images/pentagon.svg",
+    //     audioSrc: "/levels-audio/pentagon.mp3",
+    //   },
+    //   {
+    //     id: 327,
+    //     lessonId: 37, //Shapes
+    //     type: "READ",
+    //     order: 12,
+    //     question: "Star",
+    //     imageSrc: "/levels-images/star.svg",
+    //     audioSrc: "/levels-audio/star.mp3",
+    //   },
+    //   {
+    //     id: 328,
+    //     lessonId: 37, //Shapes
+    //     type: "READ",
+    //     order: 13,
+    //     question: "Triangle",
+    //     imageSrc: "/levels-images/triangle.svg",
+    //     audioSrc: "/levels-audio/triangle.mp3",
+    //   },
+    // ]);
+
+    // // English Unit 15
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 19,
+    //     courseId: 2, //English
+    //     title: "Unit 15",
+    //     description: "Modes of Transportation",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 15 - Modes of Transportation
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 38,
+    //     unitId: 19, //Unit 15 eng
+    //     order: 1,
+    //     title: "Transportation",
+    //   },
+    // ]);
+    // // 6 challenges for 6 Modes of Transportation
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 329,
+    //     lessonId: 38, //Modes of Transportation
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Aeroplane",
+    //     imageSrc: "/levels-images/aeroplane.svg",
+    //     audioSrc: "/levels-audio/aeroplane.mp3",
+    //   },
+    //   {
+    //     id: 330,
+    //     lessonId: 38, //Modes of Transportation
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Bicycle",
+    //     imageSrc: "/levels-images/bicycle.svg",
+    //     audioSrc: "/levels-audio/bicycle.mp3",
+    //   },
+    //   {
+    //     id: 331,
+    //     lessonId: 38, //Modes of Transportation
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Car",
+    //     imageSrc: "/levels-images/car.svg",
+    //     audioSrc: "/levels-audio/car.mp3",
+    //   },
+    //   {
+    //     id: 332,
+    //     lessonId: 38, //Modes of Transportation
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Helicopter",
+    //     imageSrc: "/levels-images/helicopter.svg",
+    //     audioSrc: "/levels-audio/helicopter.mp3",
+    //   },
+    //   {
+    //     id: 333,
+    //     lessonId: 38, //Modes of Transportation
+    //     type: "READ",
+    //     order: 5,
+    //     question: "Ship",
+    //     imageSrc: "/levels-images/ship.svg",
+    //     audioSrc: "/levels-audio/ship.mp3",
+    //   },
+    //   {
+    //     id: 334,
+    //     lessonId: 38, //Modes of Transportation
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Train",
+    //     imageSrc: "/levels-images/train.svg",
+    //     audioSrc: "/levels-audio/train.mp3",
+    //   },
+    // ]);
+
+    // // English Unit 16
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 20,
+    //     courseId: 2, //English
+    //     title: "Unit 16",
+    //     description: "Stationary Items",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 16 - Stationary Items
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 39,
+    //     unitId: 20, //Unit 16 eng
+    //     order: 1,
+    //     title: "Stationary",
+    //   },
+    // ]);
+    // // 8 challenges for 6 Stationary Items
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 335,
+    //     lessonId: 39, //Stationary Items
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Stapler",
+    //     imageSrc: "/levels-images/stapler.svg",
+    //     audioSrc: "/levels-audio/stapler.mp3",
+    //   },
+    //   {
+    //     id: 336,
+    //     lessonId: 39, //Stationary Items
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Scissor",
+    //     imageSrc: "/levels-images/scissor.svg",
+    //     audioSrc: "/levels-audio/scissor.mp3",
+    //   },
+    //   {
+    //     id: 337,
+    //     lessonId: 39, //Stationary Items
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Ruler",
+    //     imageSrc: "/levels-images/ruler.svg",
+    //     audioSrc: "/levels-audio/ruler.mp3",
+    //   },
+    //   {
+    //     id: 338,
+    //     lessonId: 39, //Stationary Items
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Pencil",
+    //     imageSrc: "/levels-images/pencil.svg",
+    //     audioSrc: "/levels-audio/pencil.mp3",
+    //   },
+    //   {
+    //     id: 339,
+    //     lessonId: 39, //Stationary Items
+    //     type: "READ",
+    //     order: 5,
+    //     question: "Pen",
+    //     imageSrc: "/levels-images/pen.svg",
+    //     audioSrc: "/levels-audio/pen.mp3",
+    //   },
+    //   {
+    //     id: 340,
+    //     lessonId: 39, //Stationary Items
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Paperclip",
+    //     imageSrc: "/levels-images/paperclip.svg",
+    //     audioSrc: "/levels-audio/paperclip.mp3",
+    //   },
+    //   {
+    //     id: 341,
+    //     lessonId: 39, //Stationary Items
+    //     type: "READ",
+    //     order: 7,
+    //     question: "Highlighter",
+    //     imageSrc: "/levels-images/highlighter.svg",
+    //     audioSrc: "/levels-audio/highlighter.mp3",
+    //   },
+    //   {
+    //     id: 342,
+    //     lessonId: 39, //Stationary Items
+    //     type: "READ",
+    //     order: 8,
+    //     question: "Calculator",
+    //     imageSrc: "/levels-images/calculator.svg",
+    //     audioSrc: "/levels-audio/calculator.mp3",
+    //   },
+    // ]);
+
+    // // English Unit 17
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 21,
+    //     courseId: 2, //English
+    //     title: "Unit 17",
+    //     description: "Occupations",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 17 - Occupations
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 40,
+    //     unitId: 21, //Unit 17 eng
+    //     order: 1,
+    //     title: "Occupations",
+    //   },
+    // ]);
+    // // 11 challenges for 11 Occupations
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 343,
+    //     lessonId: 40, //Occupations
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Teacher",
+    //     imageSrc: "/levels-images/teacher.svg",
+    //     audioSrc: "/levels-audio/teacher.mp3",
+    //   },
+    //   {
+    //     id: 344,
+    //     lessonId: 40, //Occupations
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Soldier",
+    //     imageSrc: "/levels-images/soldier.svg",
+    //     audioSrc: "/levels-audio/soldier.mp3",
+    //   },
+    //   {
+    //     id: 345,
+    //     lessonId: 40, //Occupations
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Policeman",
+    //     imageSrc: "/levels-images/policeman.svg",
+    //     audioSrc: "/levels-audio/policeman.mp3",
+    //   },
+    //   {
+    //     id: 346,
+    //     lessonId: 40, //Occupations
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Nurse",
+    //     imageSrc: "/levels-images/nurse.svg",
+    //     audioSrc: "/levels-audio/nurse.mp3",
+    //   },
+    //   {
+    //     id: 347,
+    //     lessonId: 40, //Occupations
+    //     type: "READ",
+    //     order: 5,
+    //     question: "Mechanic",
+    //     imageSrc: "/levels-images/mechanic.svg",
+    //     audioSrc: "/levels-audio/mechanic.mp3",
+    //   },
+    //   {
+    //     id: 348,
+    //     lessonId: 40, //Occupations
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Lawyer",
+    //     imageSrc: "/levels-images/lawyer.svg",
+    //     audioSrc: "/levels-audio/lawyer.mp3",
+    //   },
+    //   {
+    //     id: 349,
+    //     lessonId: 40, //Occupations
+    //     type: "READ",
+    //     order: 7,
+    //     question: "Electrician",
+    //     imageSrc: "/levels-images/electrician.svg",
+    //     audioSrc: "/levels-audio/electrician.mp3",
+    //   },
+    //   {
+    //     id: 350,
+    //     lessonId: 40, //Occupations
+    //     type: "READ",
+    //     order: 8,
+    //     question: "Construction Worker",
+    //     imageSrc: "/levels-images/constructionworker.svg",
+    //     audioSrc: "/levels-audio/constructionworker.mp3",
+    //   },
+    //   {
+    //     id: 351,
+    //     lessonId: 40, //Occupations
+    //     type: "READ",
+    //     order: 9,
+    //     question: "Carpenter",
+    //     imageSrc: "/levels-images/carpenter.svg",
+    //     audioSrc: "/levels-audio/carpenter.mp3",
+    //   },
+    //   {
+    //     id: 352,
+    //     lessonId: 40, //Occupations
+    //     type: "READ",
+    //     order: 10,
+    //     question: "Astronaut",
+    //     imageSrc: "/levels-images/astronaut.svg",
+    //     audioSrc: "/levels-audio/astronaut.mp3",
+    //   },
+    //   {
+    //     id: 353,
+    //     lessonId: 40, //Occupations
+    //     type: "READ",
+    //     order: 11,
+    //     question: "Accountant",
+    //     imageSrc: "/levels-images/accountant.svg",
+    //     audioSrc: "/levels-audio/accountant.mp3",
+    //   },
+    // ]);
+
+    // English Unit 18
     await db.insert(schema.units).values([
       {
-        id: 7,
+        id: 22,
         courseId: 2, //English
-        title: "Unit 3",
-        description: "Phonics",
+        title: "Unit 18",
+        description: "Clothing Items",
         order: 1,
       },
     ]);
-    // 1 lessons in unit 2 - Phonics Pronunciation
+    // 1 lessons in unit 18 - clothing items
     await db.insert(schema.lessons).values([
       {
-        id: 26,
-        unitId: 7, //Unit 3 eng
+        id: 41,
+        unitId: 22, //Unit 18 eng
         order: 1,
-        title: "Phonics",
+        title: "Clothing Items",
       },
     ]);
-    // 26 challenges for Phonics - 1 for each letter
+    // 10 challenges for 10 items
     await db.insert(schema.challenges).values([
       {
-        id: 206,
-        lessonId: 26, //Phonics
+        id: 354,
+        lessonId: 41, //Clothing Items
         type: "READ",
         order: 1,
-        question: "Apple",
-        imageSrc: "/levels-images/apple.svg",
-        audioSrc: "/levels-audio/apple.mp3",
+        question: "Suit",
+        imageSrc: "/levels-images/suit.svg",
+        audioSrc: "/levels-audio/suit.mp3",
       },
       {
-        id: 207,
-        lessonId: 26, //Phonics
+        id: 355,
+        lessonId: 41, //Clothing Items
         type: "READ",
         order: 2,
-        question: "Ball",
-        imageSrc: "/levels-images/ball.svg",
-        audioSrc: "/levels-audio/ball.mp3",
+        question: "Socks",
+        imageSrc: "/levels-images/socks.svg",
+        audioSrc: "/levels-audio/socks.mp3",
       },
       {
-        id: 208,
-        lessonId: 26, //Phonics
+        id: 356,
+        lessonId: 41, //Clothing Items
         type: "READ",
         order: 3,
-        question: "Cat",
-        imageSrc: "/levels-images/cat.svg",
-        audioSrc: "/levels-audio/cat.mp3",
+        question: "Slippers",
+        imageSrc: "/levels-images/slippers.svg",
+        audioSrc: "/levels-audio/slippers.mp3",
       },
       {
-        id: 209,
-        lessonId: 26, //Phonics
+        id: 357,
+        lessonId: 41, //Clothing Items
         type: "READ",
         order: 4,
-        question: "Dog",
-        imageSrc: "/levels-images/dog.svg",
-        audioSrc: "/levels-audio/dog.mp3",
+        question: "Shirt",
+        imageSrc: "/levels-images/shirt.svg",
+        audioSrc: "/levels-audio/shirt.mp3",
       },
       {
-        id: 210,
-        lessonId: 26, //Phonics
+        id: 358,
+        lessonId: 41, //Clothing Items
         type: "READ",
         order: 5,
-        question: "Elephant",
-        imageSrc: "/levels-images/elephant.svg",
-        audioSrc: "/levels-audio/elephant.mp3",
+        question: "Jeans",
+        imageSrc: "/levels-images/jeans.svg",
+        audioSrc: "/levels-audio/jeans.mp3",
       },
       {
-        id: 211,
-        lessonId: 26, //Phonics
+        id: 359,
+        lessonId: 41, //Clothing Items
         type: "READ",
         order: 6,
-        question: "Food",
-        imageSrc: "/levels-images/food.svg",
-        audioSrc: "/levels-audio/food.mp3",
+        question: "Jacket",
+        imageSrc: "/levels-images/jacket.svg",
+        audioSrc: "/levels-audio/jacket.mp3",
       },
       {
-        id: 212,
-        lessonId: 26, //Phonics
+        id: 360,
+        lessonId: 41, //Clothing Items
         type: "READ",
         order: 7,
-        question: "Gate",
-        imageSrc: "/levels-images/gate.svg",
-        audioSrc: "/levels-audio/gate.mp3",
-      },
-      {
-        id: 213,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 8,
         question: "Hat",
         imageSrc: "/levels-images/hat.svg",
-        audioSrc: "/levels-audio/hat.mp3",
+        audioSrc: "/levels-audio/hatt.mp3",
       },
       {
-        id: 214,
-        lessonId: 26, //Phonics
+        id: 361,
+        lessonId: 41, //Clothing Items
+        type: "READ",
+        order: 8,
+        question: "Gloves",
+        imageSrc: "/levels-images/gloves.svg",
+        audioSrc: "/levels-audio/gloves.mp3",
+      },
+      {
+        id: 362,
+        lessonId: 41, //Clothing Items
         type: "READ",
         order: 9,
-        question: "Insect",
-        imageSrc: "/levels-images/insect.svg",
-        audioSrc: "/levels-audio/insect.mp3",
+        question: "Coat",
+        imageSrc: "/levels-images/coat.svg",
+        audioSrc: "/levels-audio/coat.mp3",
       },
       {
-        id: 215,
-        lessonId: 26, //Phonics
+        id: 363,
+        lessonId: 41, //Clothing Items
         type: "READ",
         order: 10,
-        question: "Jug",
-        imageSrc: "/levels-images/jug.svg",
-        audioSrc: "/levels-audio/jug.mp3",
-      },
-      {
-        id: 216,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 11,
-        question: "Kite",
-        imageSrc: "/levels-images/kite.svg",
-        audioSrc: "/levels-audio/kite.mp3",
-      },
-      {
-        id: 217,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 12,
-        question: "Lamp",
-        imageSrc: "/levels-images/lamp.svg",
-        audioSrc: "/levels-audio/lamp.mp3",
-      },
-      {
-        id: 218,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 13,
-        question: "Milk",
-        imageSrc: "/levels-images/milk.svg",
-        audioSrc: "/levels-audio/milk.mp3",
-      },
-      {
-        id: 219,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 14,
-        question: "Needle",
-        imageSrc: "/levels-images/needle.svg",
-        audioSrc: "/levels-audio/needle.mp3",
-      },
-      {
-        id: 220,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 15,
-        question: "Orange",
-        imageSrc: "/levels-images/orange.svg",
-        audioSrc: "/levels-audio/orange.mp3",
-      },
-      {
-        id: 221,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 16,
-        question: "Pencil",
-        imageSrc: "/levels-images/pencil.svg",
-        audioSrc: "/levels-audio/pencil.mp3",
-      },
-      {
-        id: 222,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 17,
-        question: "Question Mark",
-        imageSrc: "/levels-images/question.svg",
-        audioSrc: "/levels-audio/question.mp3",
-      },
-      {
-        id: 223,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 18,
-        question: "Rice",
-        imageSrc: "/levels-images/rice.svg",
-        audioSrc: "/levels-audio/rice.mp3",
-      },
-      {
-        id: 224,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 19,
-        question: "Sun",
-        imageSrc: "/levels-images/sun.svg",
-        audioSrc: "/levels-audio/sun.mp3",
-      },
-      {
-        id: 225,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 20,
-        question: "Tomato",
-        imageSrc: "/levels-images/tomato.svg",
-        audioSrc: "/levels-audio/tomato.mp3",
-      },
-      {
-        id: 226,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 21,
-        question: "Umbrella",
-        imageSrc: "/levels-images/umbrella.svg",
-        audioSrc: "/levels-audio/umbrella.mp3",
-      },
-      {
-        id: 227,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 22,
-        question: "Van",
-        imageSrc: "/levels-images/van.svg",
-        audioSrc: "/levels-audio/van.mp3",
-      },
-      {
-        id: 228,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 23,
-        question: "Water",
-        imageSrc: "/levels-images/water.svg",
-        audioSrc: "/levels-audio/water.mp3",
-      },
-      {
-        id: 229,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 24,
-        question: "X-Ray",
-        imageSrc: "/levels-images/xray.svg",
-        audioSrc: "/levels-audio/xray.mp3",
-      },
-      {
-        id: 230,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 25,
-        question: "Yellow",
-        imageSrc: "/levels-images/yellow.svg",
-        audioSrc: "/levels-audio/yellow.mp3",
-      },
-      {
-        id: 231,
-        lessonId: 26, //Phonics
-        type: "READ",
-        order: 26,
-        question: "Zebra",
-        imageSrc: "/levels-images/zebra.svg",
-        audioSrc: "/levels-audio/zebra.mp3",
+        question: "Boots",
+        imageSrc: "/levels-images/boots.svg",
+        audioSrc: "/levels-audio/boots.mp3",
       },
     ]);
 
