@@ -4406,134 +4406,396 @@ const main = async () => {
     //   },
     // ]);
 
-    // English Unit 19
+    // // English Unit 19
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 23,
+    //     courseId: 2, //English
+    //     title: "Unit 19",
+    //     description: "Animals",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 19 - Animals
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 42,
+    //     unitId: 23, //Unit 19 eng
+    //     order: 1,
+    //     title: "Animals",
+    //   },
+    // ]);
+    // // 12 challenges for 12 animals
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 364,
+    //     lessonId: 42, //Animal
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Cat",
+    //     imageSrc: "/levels-images/cat.svg",
+    //     audioSrc: "/levels-audio/catt.mp3",
+    //   },
+    //   {
+    //     id: 365,
+    //     lessonId: 42, //Animal
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Dog",
+    //     imageSrc: "/levels-images/dog.svg",
+    //     audioSrc: "/levels-audio/dogg.mp3",
+    //   },
+    //   {
+    //     id: 366,
+    //     lessonId: 42, //Animal
+    //     type: "READ",
+    //     order: 3,
+    //     question: "motherboard",
+    //     imageSrc: "/levels-images/wolf.svg",
+    //     audioSrc: "/levels-audio/wolf.mp3",
+    //   },
+    //   {
+    //     id: 367,
+    //     lessonId: 42, //Animal
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Tiger",
+    //     imageSrc: "/levels-images/tiger.svg",
+    //     audioSrc: "/levels-audio/tiger.mp3",
+    //   },
+    //   {
+    //     id: 368,
+    //     lessonId: 42, //Animal
+    //     type: "READ",
+    //     order: 5,
+    //     question: "Mouse",
+    //     imageSrc: "/levels-images/mouse.svg",
+    //     audioSrc: "/levels-audio/mouse.mp3",
+    //   },
+    //   {
+    //     id: 369,
+    //     lessonId: 42, //Animal
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Monkey",
+    //     imageSrc: "/levels-images/monkey.svg",
+    //     audioSrc: "/levels-audio/monkey.mp3",
+    //   },
+    //   {
+    //     id: 370,
+    //     lessonId: 42, //Animal
+    //     type: "READ",
+    //     order: 7,
+    //     question: "Lion",
+    //     imageSrc: "/levels-images/lion.svg",
+    //     audioSrc: "/levels-audio/lion.mp3",
+    //   },
+    //   {
+    //     id: 371,
+    //     lessonId: 42, //Animal
+    //     type: "READ",
+    //     order: 8,
+    //     question: "Gorilla",
+    //     imageSrc: "/levels-images/gorilla.svg",
+    //     audioSrc: "/levels-audio/gorilla.mp3",
+    //   },
+    //   {
+    //     id: 372,
+    //     lessonId: 42, //Animal
+    //     type: "READ",
+    //     order: 9,
+    //     question: "Goat",
+    //     imageSrc: "/levels-images/goat.svg",
+    //     audioSrc: "/levels-audio/goat.mp3",
+    //   },
+    //   {
+    //     id: 373,
+    //     lessonId: 42, //Animal
+    //     type: "READ",
+    //     order: 10,
+    //     question: "Cow",
+    //     imageSrc: "/levels-images/cow.svg",
+    //     audioSrc: "/levels-audio/cow.mp3",
+    //   },
+    //   {
+    //     id: 374,
+    //     lessonId: 42, //Animal
+    //     type: "READ",
+    //     order: 11,
+    //     question: "Camel",
+    //     imageSrc: "/levels-images/camel.svg",
+    //     audioSrc: "/levels-audio/camel.mp3",
+    //   },
+    //   {
+    //     id: 375,
+    //     lessonId: 42, //Animal
+    //     type: "READ",
+    //     order: 12,
+    //     question: "Bear",
+    //     imageSrc: "/levels-images/bear.svg",
+    //     audioSrc: "/levels-audio/bear.mp3",
+    //   },
+    // ]);
+
+    // // English Unit 20
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 24,
+    //     courseId: 2, //English
+    //     title: "Unit 20",
+    //     description: "Computer Parts",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 1 lessons in unit 19 - Computer Parts
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 43,
+    //     unitId: 24, //Unit 19 eng
+    //     order: 1,
+    //     title: "Computer Parts",
+    //   },
+    // ]);
+    // // 7 challenges for 7 Computer Parts
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 376,
+    //     lessonId: 43, //Computer Parts
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Ram",
+    //     imageSrc: "/levels-images/ram.svg",
+    //     audioSrc: "/levels-audio/ram.mp3",
+    //   },
+    //   {
+    //     id: 377,
+    //     lessonId: 43, //Computer Parts
+    //     type: "READ",
+    //     order: 2,
+    //     question: "Mouse",
+    //     imageSrc: "/levels-images/mousee.svg",
+    //     audioSrc: "/levels-audio/mouse.mp3",
+    //   },
+    //   {
+    //     id: 378,
+    //     lessonId: 43, //Computer Parts
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Motherboard",
+    //     imageSrc: "/levels-images/motherboard.svg",
+    //     audioSrc: "/levels-audio/motherboard.mp3",
+    //   },
+    //   {
+    //     id: 379,
+    //     lessonId: 43, //Computer Parts
+    //     type: "READ",
+    //     order: 4,
+    //     question: "Monitor",
+    //     imageSrc: "/levels-images/monitor.svg",
+    //     audioSrc: "/levels-audio/monitor.mp3",
+    //   },
+    //   {
+    //     id: 380,
+    //     lessonId: 43, //Computer Parts
+    //     type: "READ",
+    //     order: 5,
+    //     question: "Keyboard",
+    //     imageSrc: "/levels-images/keyboard.svg",
+    //     audioSrc: "/levels-audio/keyboard.mp3",
+    //   },
+    //   {
+    //     id: 381,
+    //     lessonId: 43, //Computer Parts
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Graphics Card",
+    //     imageSrc: "/levels-images/gpu.svg",
+    //     audioSrc: "/levels-audio/gpu.mp3",
+    //   },
+    //   {
+    //     id: 382,
+    //     lessonId: 43, //Computer Parts
+    //     type: "READ",
+    //     order: 7,
+    //     question: "CPU",
+    //     imageSrc: "/levels-images/cpu.svg",
+    //     audioSrc: "/levels-audio/cpu.mp3",
+    //   },
+    //   {
+    //     id: 383,
+    //     lessonId: 43, //Computer Parts
+    //     type: "READ",
+    //     order: 8,
+    //     question: "Gorilla",
+    //     imageSrc: "/levels-images/gorilla.svg",
+    //     audioSrc: "/levels-audio/gorilla.mp3",
+    //   },
+    // ]);
+
+    // English Unit 21
     await db.insert(schema.units).values([
       {
-        id: 23,
+        id: 25,
         courseId: 2, //English
-        title: "Unit 19",
-        description: "Animals",
+        title: "Unit 21",
+        description: "Countries Flags",
         order: 1,
       },
     ]);
-    // 1 lessons in unit 19 - Animals
+    // 16 lessons in unit 20 - Countries Flags
     await db.insert(schema.lessons).values([
       {
-        id: 42,
-        unitId: 23, //Unit 19 eng
+        id: 44,
+        unitId: 25, //Unit 2- eng
         order: 1,
-        title: "Animals",
+        title: "Countries Flags",
       },
     ]);
-    // 12 challenges for 12 animals
+    // 16 Flags for 16 Countries
     await db.insert(schema.challenges).values([
       {
-        id: 364,
-        lessonId: 42, //Animal
+        id: 384,
+        lessonId: 44, //Countries Flags
         type: "READ",
         order: 1,
-        question: "Cat",
-        imageSrc: "/levels-images/cat.svg",
-        audioSrc: "/levels-audio/catt.mp3",
+        question: "Pakistan",
+        imageSrc: "/levels-images/pakistan.svg",
+        audioSrc: "/levels-audio/pakistan.mp3",
       },
       {
-        id: 365,
-        lessonId: 42, //Animal
+        id: 385,
+        lessonId: 44, //Countries Flags
         type: "READ",
         order: 2,
-        question: "Dog",
-        imageSrc: "/levels-images/dog.svg",
-        audioSrc: "/levels-audio/dogg.mp3",
+        question: "India",
+        imageSrc: "/levels-images/india.svg",
+        audioSrc: "/levels-audio/india.mp3",
       },
       {
-        id: 366,
-        lessonId: 42, //Animal
+        id: 386,
+        lessonId: 44, //Countries Flags
         type: "READ",
         order: 3,
-        question: "Wolf",
-        imageSrc: "/levels-images/wolf.svg",
-        audioSrc: "/levels-audio/wolf.mp3",
+        question: "Bangladesh",
+        imageSrc: "/levels-images/bangladesh.svg",
+        audioSrc: "/levels-audio/bangladesh.mp3",
       },
       {
-        id: 367,
-        lessonId: 42, //Animal
+        id: 387,
+        lessonId: 44, //Countries Flags
         type: "READ",
         order: 4,
-        question: "Tiger",
-        imageSrc: "/levels-images/tiger.svg",
-        audioSrc: "/levels-audio/tiger.mp3",
+        question: "China",
+        imageSrc: "/levels-images/china.svg",
+        audioSrc: "/levels-audio/china.mp3",
       },
       {
-        id: 368,
-        lessonId: 42, //Animal
+        id: 388,
+        lessonId: 44, //Countries Flags
         type: "READ",
         order: 5,
-        question: "Mouse",
-        imageSrc: "/levels-images/mouse.svg",
-        audioSrc: "/levels-audio/mouse.mp3",
+        question: "USA",
+        imageSrc: "/levels-images/usa.svg",
+        audioSrc: "/levels-audio/usa.mp3",
       },
       {
-        id: 369,
-        lessonId: 42, //Animal
+        id: 389,
+        lessonId: 44, //Countries Flags
         type: "READ",
         order: 6,
-        question: "Monkey",
-        imageSrc: "/levels-images/monkey.svg",
-        audioSrc: "/levels-audio/monkey.mp3",
+        question: "Germany",
+        imageSrc: "/levels-images/germany.svg",
+        audioSrc: "/levels-audio/germany.mp3",
       },
       {
-        id: 370,
-        lessonId: 42, //Animal
+        id: 390,
+        lessonId: 44, //Countries Flags
         type: "READ",
         order: 7,
-        question: "Lion",
-        imageSrc: "/levels-images/lion.svg",
-        audioSrc: "/levels-audio/lion.mp3",
+        question: "England",
+        imageSrc: "/levels-images/england.svg",
+        audioSrc: "/levels-audio/england.mp3",
       },
       {
-        id: 371,
-        lessonId: 42, //Animal
+        id: 391,
+        lessonId: 44, //Countries Flags
         type: "READ",
         order: 8,
-        question: "Gorilla",
-        imageSrc: "/levels-images/gorilla.svg",
-        audioSrc: "/levels-audio/gorilla.mp3",
+        question: "Netherlands",
+        imageSrc: "/levels-images/netherlands.svg",
+        audioSrc: "/levels-audio/netherlands.mp3",
       },
       {
-        id: 372,
-        lessonId: 42, //Animal
+        id: 392,
+        lessonId: 44, //Countries Flags
         type: "READ",
         order: 9,
-        question: "Goat",
-        imageSrc: "/levels-images/goat.svg",
-        audioSrc: "/levels-audio/goat.mp3",
+        question: "Norway",
+        imageSrc: "/levels-images/norway.svg",
+        audioSrc: "/levels-audio/norway.mp3",
       },
       {
-        id: 373,
-        lessonId: 42, //Animal
+        id: 393,
+        lessonId: 44, //Countries Flags
         type: "READ",
         order: 10,
-        question: "Cow",
-        imageSrc: "/levels-images/cow.svg",
-        audioSrc: "/levels-audio/cow.mp3",
+        question: "Denmark",
+        imageSrc: "/levels-images/denmark.svg",
+        audioSrc: "/levels-audio/denmark.mp3",
       },
       {
-        id: 374,
-        lessonId: 42, //Animal
+        id: 394,
+        lessonId: 44, //Countries Flags
         type: "READ",
         order: 11,
-        question: "Camel",
-        imageSrc: "/levels-images/camel.svg",
-        audioSrc: "/levels-audio/camel.mp3",
+        question: "Brazil",
+        imageSrc: "/levels-images/brazil.svg",
+        audioSrc: "/levels-audio/brazil.mp3",
       },
       {
-        id: 375,
-        lessonId: 42, //Animal
+        id: 395,
+        lessonId: 44, //Countries Flags
         type: "READ",
         order: 12,
-        question: "Bear",
-        imageSrc: "/levels-images/bear.svg",
-        audioSrc: "/levels-audio/bear.mp3",
+        question: "Gautemala",
+        imageSrc: "/levels-images/gautemala.svg",
+        audioSrc: "/levels-audio/guatemala.mp3",
+      },
+      {
+        id: 396,
+        lessonId: 44, //Countries Flags
+        type: "READ",
+        order: 13,
+        question: "Morocco",
+        imageSrc: "/levels-images/morocco.svg",
+        audioSrc: "/levels-audio/morocco.mp3",
+      },
+      {
+        id: 397,
+        lessonId: 44, //Countries Flags
+        type: "READ",
+        order: 14,
+        question: "Rwanda",
+        imageSrc: "/levels-images/rwanda.svg",
+        audioSrc: "/levels-audio/rwanda.mp3",
+      },
+      {
+        id: 398,
+        lessonId: 44, //Countries Flags
+        type: "READ",
+        order: 15,
+        question: "Greece",
+        imageSrc: "/levels-images/greece.svg",
+        audioSrc: "/levels-audio/greece.mp3",
+      },
+      {
+        id: 399,
+        lessonId: 44, //Countries lags
+        type: "READ",
+        order: 16,
+        question: "Australia",
+        imageSrc: "/levels-images/australia.svg",
+        audioSrc: "/levels-audio/australia.mp3",
       },
     ]);
 
