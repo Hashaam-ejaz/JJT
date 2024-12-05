@@ -28,7 +28,7 @@ export const PUT = async (
     })
     .where(eq(challenges.id, params.challengeId))
     .returning();
-  return NextResponse.json(data);
+  return NextResponse.json(data[0]);
 };
 
 // export const DELETE = async (

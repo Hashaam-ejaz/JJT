@@ -4,13 +4,15 @@ import { neon } from "@neondatabase/serverless";
 
 import * as schema from "../database/schema";
 
-const sql = neon(process.env.DATABASE_URL!);
+const sqll = neon(process.env.DATABASE_URL!);
 
-const db = drizzle(sql, { schema });
+const db = drizzle(sqll, { schema });
+
+import { sql } from "drizzle-orm";
 
 const main = async () => {
   try {
-    console.log("Seeding Db");
+    // console.log("Seeding Db");
 
     // await db.insert(schema.courses).values([
     //   {
@@ -20,7 +22,7 @@ const main = async () => {
     //   },
     // ]);
 
-    //English unit 1
+    // // English unit 1
     // await db.insert(schema.units).values([
     //   {
     //     id: 5,
@@ -2634,7 +2636,8 @@ const main = async () => {
     //     description: "Phonics",
     //     order: 1,
     //   },
-    // ]);s
+    // ]);
+
     // // 1 lessons in unit 3 - Phonics Pronunciation
     // await db.insert(schema.lessons).values([
     //   {
@@ -4632,174 +4635,205 @@ const main = async () => {
     //   },
     // ]);
 
-    // English Unit 21
-    await db.insert(schema.units).values([
-      {
-        id: 25,
-        courseId: 2, //English
-        title: "Unit 21",
-        description: "Countries Flags",
-        order: 1,
-      },
-    ]);
-    // 16 lessons in unit 20 - Countries Flags
-    await db.insert(schema.lessons).values([
-      {
-        id: 44,
-        unitId: 25, //Unit 2- eng
-        order: 1,
-        title: "Countries Flags",
-      },
-    ]);
-    // 16 Flags for 16 Countries
-    await db.insert(schema.challenges).values([
-      {
-        id: 384,
-        lessonId: 44, //Countries Flags
-        type: "READ",
-        order: 1,
-        question: "Pakistan",
-        imageSrc: "/levels-images/pakistan.svg",
-        audioSrc: "/levels-audio/pakistan.mp3",
-      },
-      {
-        id: 385,
-        lessonId: 44, //Countries Flags
-        type: "READ",
-        order: 2,
-        question: "India",
-        imageSrc: "/levels-images/india.svg",
-        audioSrc: "/levels-audio/india.mp3",
-      },
-      {
-        id: 386,
-        lessonId: 44, //Countries Flags
-        type: "READ",
-        order: 3,
-        question: "Bangladesh",
-        imageSrc: "/levels-images/bangladesh.svg",
-        audioSrc: "/levels-audio/bangladesh.mp3",
-      },
-      {
-        id: 387,
-        lessonId: 44, //Countries Flags
-        type: "READ",
-        order: 4,
-        question: "China",
-        imageSrc: "/levels-images/china.svg",
-        audioSrc: "/levels-audio/china.mp3",
-      },
-      {
-        id: 388,
-        lessonId: 44, //Countries Flags
-        type: "READ",
-        order: 5,
-        question: "USA",
-        imageSrc: "/levels-images/usa.svg",
-        audioSrc: "/levels-audio/usa.mp3",
-      },
-      {
-        id: 389,
-        lessonId: 44, //Countries Flags
-        type: "READ",
-        order: 6,
-        question: "Germany",
-        imageSrc: "/levels-images/germany.svg",
-        audioSrc: "/levels-audio/germany.mp3",
-      },
-      {
-        id: 390,
-        lessonId: 44, //Countries Flags
-        type: "READ",
-        order: 7,
-        question: "England",
-        imageSrc: "/levels-images/england.svg",
-        audioSrc: "/levels-audio/england.mp3",
-      },
-      {
-        id: 391,
-        lessonId: 44, //Countries Flags
-        type: "READ",
-        order: 8,
-        question: "Netherlands",
-        imageSrc: "/levels-images/netherlands.svg",
-        audioSrc: "/levels-audio/netherlands.mp3",
-      },
-      {
-        id: 392,
-        lessonId: 44, //Countries Flags
-        type: "READ",
-        order: 9,
-        question: "Norway",
-        imageSrc: "/levels-images/norway.svg",
-        audioSrc: "/levels-audio/norway.mp3",
-      },
-      {
-        id: 393,
-        lessonId: 44, //Countries Flags
-        type: "READ",
-        order: 10,
-        question: "Denmark",
-        imageSrc: "/levels-images/denmark.svg",
-        audioSrc: "/levels-audio/denmark.mp3",
-      },
-      {
-        id: 394,
-        lessonId: 44, //Countries Flags
-        type: "READ",
-        order: 11,
-        question: "Brazil",
-        imageSrc: "/levels-images/brazil.svg",
-        audioSrc: "/levels-audio/brazil.mp3",
-      },
-      {
-        id: 395,
-        lessonId: 44, //Countries Flags
-        type: "READ",
-        order: 12,
-        question: "Gautemala",
-        imageSrc: "/levels-images/gautemala.svg",
-        audioSrc: "/levels-audio/guatemala.mp3",
-      },
-      {
-        id: 396,
-        lessonId: 44, //Countries Flags
-        type: "READ",
-        order: 13,
-        question: "Morocco",
-        imageSrc: "/levels-images/morocco.svg",
-        audioSrc: "/levels-audio/morocco.mp3",
-      },
-      {
-        id: 397,
-        lessonId: 44, //Countries Flags
-        type: "READ",
-        order: 14,
-        question: "Rwanda",
-        imageSrc: "/levels-images/rwanda.svg",
-        audioSrc: "/levels-audio/rwanda.mp3",
-      },
-      {
-        id: 398,
-        lessonId: 44, //Countries Flags
-        type: "READ",
-        order: 15,
-        question: "Greece",
-        imageSrc: "/levels-images/greece.svg",
-        audioSrc: "/levels-audio/greece.mp3",
-      },
-      {
-        id: 399,
-        lessonId: 44, //Countries lags
-        type: "READ",
-        order: 16,
-        question: "Australia",
-        imageSrc: "/levels-images/australia.svg",
-        audioSrc: "/levels-audio/australia.mp3",
-      },
-    ]);
+    // // English Unit 21
+    // await db.insert(schema.units).values([
+    //   {
+    //     id: 25,
+    //     courseId: 2, //English
+    //     title: "Unit 21",
+    //     description: "Countries Flags",
+    //     order: 1,
+    //   },
+    // ]);
+    // // 16 lessons in unit 20 - Countries Flags
+    // await db.insert(schema.lessons).values([
+    //   {
+    //     id: 44,
+    //     unitId: 25, //Unit 2- eng
+    //     order: 1,
+    //     title: "Countries Flags",
+    //   },
+    // ]);
+    // // 16 Flags for 16 Countries
+    // await db.insert(schema.challenges).values([
+    //   {
+    //     id: 384,
+    //     lessonId: 44, //Countries Flags
+    //     type: "READ",
+    //     order: 1,
+    //     question: "Pakistan",
+    //     imageSrc: "/levels-images/pakistan.svg",
+    //     audioSrc: "/levels-audio/pakistan.mp3",
+    //   },
+    //   {
+    //     id: 385,
+    //     lessonId: 44, //Countries Flags
+    //     type: "READ",
+    //     order: 2,
+    //     question: "India",
+    //     imageSrc: "/levels-images/india.svg",
+    //     audioSrc: "/levels-audio/india.mp3",
+    //   },
+    //   {
+    //     id: 386,
+    //     lessonId: 44, //Countries Flags
+    //     type: "READ",
+    //     order: 3,
+    //     question: "Bangladesh",
+    //     imageSrc: "/levels-images/bangladesh.svg",
+    //     audioSrc: "/levels-audio/bangladesh.mp3",
+    //   },
+    //   {
+    //     id: 387,
+    //     lessonId: 44, //Countries Flags
+    //     type: "READ",
+    //     order: 4,
+    //     question: "China",
+    //     imageSrc: "/levels-images/china.svg",
+    //     audioSrc: "/levels-audio/china.mp3",
+    //   },
+    //   {
+    //     id: 388,
+    //     lessonId: 44, //Countries Flags
+    //     type: "READ",
+    //     order: 5,
+    //     question: "USA",
+    //     imageSrc: "/levels-images/usa.svg",
+    //     audioSrc: "/levels-audio/usa.mp3",
+    //   },
+    //   {
+    //     id: 389,
+    //     lessonId: 44, //Countries Flags
+    //     type: "READ",
+    //     order: 6,
+    //     question: "Germany",
+    //     imageSrc: "/levels-images/germany.svg",
+    //     audioSrc: "/levels-audio/germany.mp3",
+    //   },
+    //   {
+    //     id: 390,
+    //     lessonId: 44, //Countries Flags
+    //     type: "READ",
+    //     order: 7,
+    //     question: "England",
+    //     imageSrc: "/levels-images/england.svg",
+    //     audioSrc: "/levels-audio/england.mp3",
+    //   },
+    //   {
+    //     id: 391,
+    //     lessonId: 44, //Countries Flags
+    //     type: "READ",
+    //     order: 8,
+    //     question: "Netherlands",
+    //     imageSrc: "/levels-images/netherlands.svg",
+    //     audioSrc: "/levels-audio/netherlands.mp3",
+    //   },
+    //   {
+    //     id: 392,
+    //     lessonId: 44, //Countries Flags
+    //     type: "READ",
+    //     order: 9,
+    //     question: "Norway",
+    //     imageSrc: "/levels-images/norway.svg",
+    //     audioSrc: "/levels-audio/norway.mp3",
+    //   },
+    //   {
+    //     id: 393,
+    //     lessonId: 44, //Countries Flags
+    //     type: "READ",
+    //     order: 10,
+    //     question: "Denmark",
+    //     imageSrc: "/levels-images/denmark.svg",
+    //     audioSrc: "/levels-audio/denmark.mp3",
+    //   },
+    //   {
+    //     id: 394,
+    //     lessonId: 44, //Countries Flags
+    //     type: "READ",
+    //     order: 11,
+    //     question: "Brazil",
+    //     imageSrc: "/levels-images/brazil.svg",
+    //     audioSrc: "/levels-audio/brazil.mp3",
+    //   },
+    //   {
+    //     id: 395,
+    //     lessonId: 44, //Countries Flags
+    //     type: "READ",
+    //     order: 12,
+    //     question: "Gautemala",
+    //     imageSrc: "/levels-images/gautemala.svg",
+    //     audioSrc: "/levels-audio/guatemala.mp3",
+    //   },
+    //   {
+    //     id: 396,
+    //     lessonId: 44, //Countries Flags
+    //     type: "READ",
+    //     order: 13,
+    //     question: "Morocco",
+    //     imageSrc: "/levels-images/morocco.svg",
+    //     audioSrc: "/levels-audio/morocco.mp3",
+    //   },
+    //   {
+    //     id: 397,
+    //     lessonId: 44, //Countries Flags
+    //     type: "READ",
+    //     order: 14,
+    //     question: "Rwanda",
+    //     imageSrc: "/levels-images/rwanda.svg",
+    //     audioSrc: "/levels-audio/rwanda.mp3",
+    //   },
+    //   {
+    //     id: 398,
+    //     lessonId: 44, //Countries Flags
+    //     type: "READ",
+    //     order: 15,
+    //     question: "Greece",
+    //     imageSrc: "/levels-images/greece.svg",
+    //     audioSrc: "/levels-audio/greece.mp3",
+    //   },
+    //   {
+    //     id: 399,
+    //     lessonId: 44, //Countries lags
+    //     type: "READ",
+    //     order: 16,
+    //     question: "Australia",
+    //     imageSrc: "/levels-images/australia.svg",
+    //     audioSrc: "/levels-audio/australia.mp3",
+    //   },
+    // ]);
 
-    console.log("Seeding finished");
+    // console.log("Seeding finished");
+
+    // async function fixSequence() {
+    try {
+      // Find the maximum ID in the challengeOptions table
+      const maxIdResult = await db.execute(
+        sql`SELECT MAX(id) AS max_id FROM "challenge_options"`,
+      );
+      const maxId = (maxIdResult.rows[0]?.max_id as number) - 1;
+      console.log("Max ID in challenge_options table:", maxId);
+
+      // Update the sequence
+      if (maxId !== null) {
+        await db.execute(
+          sql`SELECT setval('challenge_options_id_seq', ${maxId}, true)`,
+        );
+        console.log(`Sequence updated to ${maxId}`);
+      } else {
+        console.log("No records found in the challenge_options table.");
+      }
+
+      // Verify the update
+      const nextValue = await db.execute(
+        sql`SELECT nextval('challenge_options_id_seq')`,
+      );
+      console.log("Next Sequence Value:", nextValue.rows[0]?.nextval);
+    } catch (error) {
+      console.error("Error fixing sequence:", error);
+    }
+    // }
+
+    // fixSequence();
   } catch (error) {
     console.error(error);
     throw new Error("Failed to seed the db");
@@ -4807,3 +4841,53 @@ const main = async () => {
 };
 
 main();
+
+// async function fixSequence() {
+//   try {
+//     // Find the maximum ID in the challenges table
+//     const maxIdResult = await db.execute(
+//       sql`SELECT MAX(id) AS max_id FROM Units`,
+//     );
+//     const maxId = maxIdResult.rows[0]?.max_id;
+//     console.log("Max ID in Units table:", maxId);
+
+//     // Update the sequence
+//     if (maxId !== null) {
+//       await db.execute(sql`SELECT setval('Units_id_seq', ${maxId})`);
+//       console.log(`Sequence updated to ${maxId}`);
+//     } else {
+//       console.log("No records found in the Units table.");
+//     }
+
+//     // Verify the update
+//     const nextValue = await db.execute(sql`SELECT nextval('Units_id_seq')`);
+//     console.log("Next Sequence Value:", nextValue.rows[0]?.nextval);
+//   } catch (error) {
+//     console.error("Error fixing sequence:", error);
+//   }
+// }
+
+// fixSequence();
+
+// async function fixSequence2() {
+//   try {
+//     // Find the maximum ID in the courses table
+//     const maxIdResult = await db.execute(
+//       sql`SELECT COALESCE(MAX(id), 0) AS max_id FROM courses`,
+//     );
+//     const maxId = maxIdResult.rows[0]?.max_id || 0; // Use 0 if table is empty
+//     console.log("Max ID in courses table:", maxId);
+
+//     // Reset the sequence to match the max ID
+//     await db.execute(sql`SELECT setval('courses_id_seq', ${maxId}, true)`); // Use true to ensure the nextval starts with maxId + 1
+//     console.log(`Sequence updated to ${maxId}`);
+
+//     // Verify the update
+//     const nextValue = await db.execute(sql`SELECT nextval('courses_id_seq')`);
+//     console.log("Next Sequence Value:", nextValue.rows[0]?.nextval);
+//   } catch (error) {
+//     console.error("Error fixing sequence:", error);
+//   }
+// }
+
+// fixSequence2();

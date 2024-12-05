@@ -27,20 +27,17 @@ export const PUT = async (
     })
     .where(eq(courses.id, params.courseId))
     .returning();
-  return NextResponse.json(data);
+  if (data && data.length > 0) {
+    const updatedCourse = data[0]; // Extract the updated record
+    console.log(updatedCourse);
+    return NextResponse.json(updatedCourse);
+    // React Admin expects an object, not an array
+  } else {
+    return new NextResponse("Record not found or update failed", {
+      status: 404,
+    });
+  }
 };
-// export const DELETE = async (
-//   req: Request,
-//   { params }: { params: { courseId: number } },
-// ) => {
-//   if (!isAdmin) return new NextResponse("Untauthorized", { status: 403 });
-//   const body = await req.json();
-//   const data = await db
-//     .delete(courses)
-//     .where(eq(courses.id, params.courseId))
-//     .returning();
-//   return NextResponse.json(data[0]);
-// };
 
 export const DELETE = async (
   req: Request,

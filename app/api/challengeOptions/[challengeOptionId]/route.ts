@@ -27,19 +27,9 @@ export const PUT = async (
     })
     .where(eq(challengeOptions.id, params.challengeOptionId))
     .returning();
-  return NextResponse.json(data);
+  return NextResponse.json(data[0]);
 };
-// export const DELETE = async (
-//   req: Request,
-//   { params }: { params: { challengeOptionId: number } },
-// ) => {
-//   if (!isAdmin) return new NextResponse("Untauthorized", { status: 403 });
-//   const data = await db
-//     .delete(challengeOptions)
-//     .where(eq(challengeOptions.id, params.challengeOptionId))
-//     .returning();
-//   return NextResponse.json(data[0]);
-// };
+
 export const DELETE = async (
   req: Request,
   { params }: { params: { challengeOptionId: number } },
@@ -59,7 +49,6 @@ export const DELETE = async (
         { status: 404 },
       );
     }
-
     // Return the deleted item as a JSON response
     return NextResponse.json(data[0]);
   } catch (error) {

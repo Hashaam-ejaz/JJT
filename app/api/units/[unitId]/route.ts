@@ -27,7 +27,7 @@ export const PUT = async (
     })
     .where(eq(units.id, params.unitId))
     .returning();
-  return NextResponse.json(data);
+  return NextResponse.json(data[0]);
 };
 
 export const DELETE = async (

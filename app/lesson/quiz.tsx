@@ -75,10 +75,7 @@ export const Quiz = ({
   };
   const challenge = challenges[activeIndex];
   const options = challenge?.challengeOptions ?? [];
-  // const onNext = () => {
 
-  //   setActiveIndex((current) => current + 1);
-  // };
   const onNext = () => {
     // Check if the current challenge is of type 'READ' before updating progress
     if (challenge.type === "READ") {

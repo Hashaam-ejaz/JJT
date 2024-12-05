@@ -59,10 +59,6 @@ export const Footer = ({
           onClick={onCheck}
           className="ml-auto"
         >
-          {/* {status === "none" && "Check"}
-          {status === "correct" && "Next"}
-          {status === "wrong" && "Retry"}
-          {status === "completed" && "Continue"} */}
           {isReadType
             ? status === "completed"
               ? "Continue"

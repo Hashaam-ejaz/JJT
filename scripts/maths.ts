@@ -11,6 +11,13 @@ const db = drizzle(sql, { schema });
 const main = async () => {
   try {
     console.log("Seeding Db with maths questions");
+    await db.insert(schema.courses).values([
+      {
+        id: 1,
+        title: "Maths",
+        imageSrc: "/maths.svg",
+      },
+    ]);
     // 4 Units in Course 1 - Maths
     await db.insert(schema.units).values([
       {
